@@ -10,7 +10,8 @@
         />
         <div class="text-h4 text-center q-mt-md">
           <br />
-          <strong>特約商店-成功篇</strong>
+          <span v-if="$q.screen.gt.xs" class="q-pl-sm"><strong>特約商店-成功篇</strong></span>
+          <span v-else><strong>成功篇</strong></span>
           <br /><br />
         </div>
       </q-card-section>
