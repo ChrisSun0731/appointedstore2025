@@ -11,7 +11,6 @@
           <span v-else class="q-pl-sm">四校聯合特約商店</span>
         </q-toolbar-title>
         <q-btn
-          v-if="$q.screen.gt.xs"
           :icon="Dark.isActive ? 'dark_mode' : 'nights_stay'"
           flat
           @click="toggleDark"
