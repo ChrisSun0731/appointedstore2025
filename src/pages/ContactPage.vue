@@ -32,7 +32,7 @@
               />
             </q-btn>
             <br />
-            <h5><strong>建中班聯會</strong></h5>
+            <h5 class="text-sm"><strong>建中班聯會</strong></h5>
           </div>
           <div class="col-6 text-center">
             <q-btn flat round size="xl" color="grey-2" class="q-pa-none" @click="goTotfgsc">
@@ -44,7 +44,7 @@
               />
             </q-btn>
             <br />
-            <h5><strong>北一班聯會</strong></h5>
+            <h5 class="text-sm"><strong>北一班聯會</strong></h5>
           </div>
           <br />
           <div class="col-6 text-center">
@@ -57,7 +57,7 @@
               />
             </q-btn>
             <br />
-            <h5><strong>中山班聯會</strong></h5>
+            <h5 class="text-sm"><strong>中山班聯會</strong></h5>
           </div>
           <div class="col-6 text-center">
             <q-btn flat round size="xl" color="grey-2" class="q-pa-none" @click="goTocgcra">
@@ -69,7 +69,7 @@
               />
             </q-btn>
             <br />
-            <h5><strong>成功代聯會</strong></h5>
+            <h5 class="text-sm"><strong>成功代聯會</strong></h5>
           </div>
         </div>
       </q-card-section>
@@ -96,4 +96,15 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+@media (max-width: 600px) {
+  .q-btn {
+    width: 120px;
+    height: 120px;
+  }
+
+  h5 {
+    font-size: 16px;
+  }
+}
+</style>
