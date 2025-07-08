@@ -3,8 +3,8 @@
     <q-card flat bordered class="q-pa-xl q-mx-auto shadow-2" style="max-width: 700px; width: 100%">
       <q-card-section class="column items-center">
         <q-img
-          src="../../../public/icons/cghslogo.png"
-          alt="cglogo"
+          src="../../../public/icons/ckhslogo.png"
+          alt="cklogo"
           style="max-width: 40%; max-height: 40%"
           fit="contain"
         />
@@ -12,6 +12,7 @@
           <br />
           <span v-if="$q.screen.gt.xs" class="q-pl-sm"><strong>特約商店-成功篇</strong></span>
           <span v-else><strong>成功篇</strong></span>
+          <br /><br />
         </div>
       </q-card-section>
     </q-card>
@@ -20,14 +21,14 @@
       <div class="text-center" style="font-size: 20px">
         <strong>點選查看商店</strong><br /><br />
       </div>
-      <cgstore />
+      <ckstore />
       <q-list bordered class="rounded-borders"> </q-list>
     </div>
   </q-page>
 </template>
 
 <script setup lang="ts">
-import cgstore from '../item/CGStore.vue';
+import ckstore from '../item/CKStore.vue';
 </script>
 
 <style scoped></style>
