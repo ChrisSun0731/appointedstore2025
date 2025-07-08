@@ -3,11 +3,13 @@
     <q-card flat bordered class="q-pa-xl q-mx-auto shadow-2" style="max-width: 700px; width: 100%">
       <q-card-section class="column items-center">
         <q-img
-          src="../../../public/icons/zsghlogo.png"
+          src="/icons/zsghlogo.png"
           alt="zslogo"
           style="max-width: 40%; max-height: 40%"
           fit="contain"
+          :style="$q.dark.isActive ? 'filter: invert(1) grayscale(1) brightness(200%)' : ''"
         />
+
         <div class="text-h4 text-center q-mt-md">
           <br />
           <span v-if="$q.screen.gt.xs" class="q-pl-sm"><strong>特約商店-中山篇</strong></span>
@@ -15,22 +17,23 @@
           <br /><br />
         </div>
       </q-card-section>
-
-      <q-separator spaced />
-
-      <q-card-section class="q-pa-md text-center" fit="contain">
-        <div class="text-center" style="font-size: 20px">
-          <strong>點選查看商店</strong><br /><br />
-        </div>
-        <zsstore />
-        <q-list bordered class="rounded-borders"> </q-list>
-      </q-card-section>
     </q-card>
+
+    <div class="q-pa-md text-center" fit="contain">
+      <div class="text-center" style="font-size: 20px">
+        <strong>點選查看商店</strong><br /><br />
+      </div>
+      <zsstore />
+      <q-list bordered class="rounded-borders"> </q-list>
+    </div>
   </q-page>
 </template>
 
 <script setup lang="ts">
+import { useQuasar } from 'quasar';
 import zsstore from '../item/ZSStore.vue';
+
+const $q = useQuasar();
 </script>
 
 <style scoped></style>

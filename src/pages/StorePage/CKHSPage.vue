@@ -10,22 +10,19 @@
         />
         <div class="text-h4 text-center q-mt-md">
           <br />
-          <span v-if="$q.screen.gt.xs" class="q-pl-sm"><strong>特約商店-建中篇</strong></span>
-          <span v-else><strong>建中篇</strong></span>
+          <strong>特約商店-建中篇</strong>
           <br /><br />
         </div>
       </q-card-section>
-
-      <q-separator spaced />
-
-      <q-card-section class="q-pa-md text-center" fit="contain">
-        <div class="text-center" style="font-size: 20px">
-          <strong>點選查看商店</strong><br /><br />
-        </div>
-        <ckstore />
-        <q-list bordered class="rounded-borders"> </q-list>
-      </q-card-section>
     </q-card>
+
+    <div class="q-pa-md text-center" fit="contain">
+      <div class="text-center" style="font-size: 20px">
+        <strong>點選查看商店</strong><br /><br />
+      </div>
+      <ckstore />
+      <q-list bordered class="rounded-borders"> </q-list>
+    </div>
   </q-page>
 </template>
 
