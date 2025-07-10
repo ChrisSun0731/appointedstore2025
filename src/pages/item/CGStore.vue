@@ -41,6 +41,13 @@ export default {
           discount: '50元以上商品折扣5元',
           mapUrl: 'https://www.google.com/maps?q=台北市中正區公園路20巷2號',
         },
+        {
+          name: '大立溫州大餛鈍',
+          address: '台北市中正區公園路20巷2號',
+          phone: '(02)2375-9214',
+          discount: '50元以上商品折扣5元',
+          mapUrl: 'https://www.google.com/maps?q=台北市中正區公園路20巷2號',
+        },
       ],
     };
   },
