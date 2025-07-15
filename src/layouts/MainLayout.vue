@@ -76,7 +76,8 @@ onMounted(() => {
   if (saved === true || saved === false) {
     Dark.set(saved);
   } else {
-    Dark.set(Dark.isActive);
+    Dark.set(true);
+    LocalStorage.set('dark', true);
   }
 });
 </script>

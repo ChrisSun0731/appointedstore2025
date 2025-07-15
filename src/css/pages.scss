@@ -1,5 +1,5 @@
 .q-card {
-  border-radius: 5%;
+  border-radius: 30px !important;
 }
 
 .q-card:hover {
@@ -11,7 +11,7 @@
 }
 
 .q-card {
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255);
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 5%;
@@ -24,4 +24,66 @@
 .body--dark .q-card {
   background-color: rgba(255, 255, 255, 0.05);
   border-color: rgba(255, 255, 255, 0.1);
+}
+
+.body--dark .q-page {
+  position: relative;
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+  overflow: hidden;
+}
+
+.body--dark .q-page {
+  position: relative;
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+  overflow: hidden;
+  z-index: 0;
+}
+
+.body--dark .q-page::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background:
+    radial-gradient(ellipse at center, rgba(255, 255, 255, 0.15) 0%, transparent 70%),
+    radial-gradient(ellipse at 40% 40%, rgba(255, 255, 255, 0.05) 0%, transparent 60%),
+    radial-gradient(ellipse at 60% 60%, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+  transform: rotate(25deg);
+  filter: blur(8px);
+  opacity: 0.6;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.body--dark .q-page::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200%;
+  height: 200%;
+  background-image:
+    radial-gradient(white 1px, transparent 0), radial-gradient(white 1px, transparent 0),
+    radial-gradient(white 1px, transparent 0);
+  background-size: 200px 200px;
+  background-position:
+    0 0,
+    50px 100px,
+    100px 50px;
+  animation: star-flicker 6s ease-in-out infinite;
+  opacity: 0.3;
+  pointer-events: none;
+  z-index: 0;
+}
+
+@keyframes star-flicker {
+  0%,
+  100% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 0.6;
+  }
 }

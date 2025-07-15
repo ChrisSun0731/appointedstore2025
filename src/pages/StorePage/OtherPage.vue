@@ -12,7 +12,7 @@
           <br />
           <span v-if="$q.screen.gt.xs" class="q-pl-sm"><strong>特約商店-其他篇</strong></span>
           <span v-else><strong>其他篇</strong></span>
-          <br /><br />
+          <br />
         </div>
       </q-card-section>
     </q-card>
@@ -30,6 +30,7 @@
 <script setup lang="ts">
 import otherstore from '../item/OtherStore.vue';
 </script>
+
 <style scoped>
 @import '../../css/pages.scss';
 </style>

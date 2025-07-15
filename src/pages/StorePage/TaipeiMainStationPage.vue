@@ -12,7 +12,7 @@
           <br />
           <span v-if="$q.screen.gt.xs" class="q-pl-sm"><strong>特約商店-北車篇</strong></span>
           <span v-else><strong>北車篇</strong></span>
-          <br /><br />
+          <br />
         </div>
       </q-card-section>
     </q-card>
