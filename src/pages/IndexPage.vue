@@ -2,12 +2,7 @@
   <q-page class="q-pa-md">
     <q-card flat bordered class="q-pa-xl q-mx-auto shadow-2" style="max-width: 700px; width: 100%">
       <q-card-section class="column items-center">
-        <q-img
-          src="/icons/testlogo.svg"
-          alt="testlogo"
-          style="max-width: 40%; max-height: 40%"
-          fit="contain"
-        />
+        <q-img src="/icons/testlogo.svg" alt="testlogo" class="LogoStyle" fit="contain" />
         <div class="text-h4 text-center q-mt-md">
           <span v-if="$q.screen.gt.xs" class="q-pl-sm">
             <strong>建北中成四校聯合特約商店</strong>
@@ -75,78 +70,4 @@
 
 <style scoped>
 @import '../css/pages.scss';
-.info {
-  font-size: 0.9rem;
-  color: #000000;
-  font-weight: 500;
-  letter-spacing: 0.5px;
-}
-
-.body--dark .info {
-  color: #9ca3af;
-}
-
-.section-title {
-  font-size: 1.5rem;
-  font-weight: 600;
-  margin: 0 0 0.5rem 0;
-  text-align: center;
-}
-
-.guidelines-content {
-  max-width: 680px;
-  margin: 0 auto;
-}
-
-.guideline-item {
-  display: flex;
-  align-items: flex-start;
-  margin-bottom: 1.5rem;
-  padding: 1rem;
-  background: rgba(255, 255, 255, 0.5);
-  border-radius: 8px;
-}
-
-.body--dark .guideline-item {
-  background: rgba(255, 255, 255, 0.05);
-}
-
-.guideline-item:last-child {
-  margin-bottom: 0;
-}
-
-.guideline-number {
-  font-size: 1.1rem;
-  font-weight: 600;
-  margin-right: 1rem;
-  flex-shrink: 0;
-}
-
-.guideline-text {
-  line-height: 1.6;
-  color: #000000;
-  text-align: justify;
-}
-
-.body--dark .guideline-text {
-  color: #d1d5db;
-}
-@media (max-width: 600px) {
-  .content-section {
-    padding: 2rem 1.5rem;
-  }
-
-  .signature-section {
-    padding: 1rem;
-    text-align: center;
-  }
-
-  .guideline-item {
-    padding: 0.8rem;
-  }
-
-  .guideline-number {
-    margin-right: 0.8rem;
-  }
-}
 </style>

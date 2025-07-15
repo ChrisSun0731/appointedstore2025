@@ -5,7 +5,7 @@
         <q-img
           src="../../../public/icons/cghslogo.png"
           alt="cglogo"
-          style="max-width: 40%; max-height: 40%"
+          class="LogoStyle"
           fit="contain"
         />
         <div class="text-h4 text-center q-mt-md">

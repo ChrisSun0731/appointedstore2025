@@ -4,8 +4,8 @@
       <q-card-section class="column items-center">
         <q-img
           src="../../public/icons/testlogo.svg"
-          alt="cglogo"
-          style="max-width: 40%; max-height: 40%"
+          alt="testlogo"
+          class="LogoStyle"
           fit="contain"
         />
         <br />
@@ -25,7 +25,7 @@
           <div class="col-6 text-center">
             <q-btn flat round size="xl" color="grey-2" class="q-pa-none" @click="goTocksc">
               <q-img
-                src="../../public/icons/ckhslogo.png"
+                src="../../public/icons/cksclogo.png"
                 alt="cksc"
                 style="width: 150px; height: 150px"
                 fit="contain"
@@ -37,11 +37,10 @@
           <div class="col-6 text-center">
             <q-btn flat round size="xl" color="grey-2" class="q-pa-none" @click="goTotfgsc">
               <q-img
-                src="../../public/icons/tfglogo.png"
+                src="../../public/icons/tfgsclogo.png"
                 alt="cksc"
                 style="width: 150px; height: 150px"
                 fit="contain"
-                :style="$q.dark.isActive ? 'filter: invert(1) grayscale(1) brightness(200%)' : ''"
               />
             </q-btn>
             <br />

@@ -5,7 +5,7 @@
         <q-img
           src="/icons/zsghlogo.png"
           alt="zslogo"
-          style="max-width: 40%; max-height: 40%"
+          class="LogoStyle"
           fit="contain"
           :style="$q.dark.isActive ? 'filter: invert(1) grayscale(1) brightness(200%)' : ''"
         />

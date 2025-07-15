@@ -4,8 +4,8 @@
       <q-card-section class="column items-center">
         <q-img
           src="../../public/icons/testlogo.svg"
-          alt="cglogo"
-          style="max-width: 40%; max-height: 40%"
+          alt="testlogo"
+          class="LogoStyle"
           fit="contain"
         />
         <br />
