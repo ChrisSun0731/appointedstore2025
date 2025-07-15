@@ -89,10 +89,10 @@ export default {
       window.open('https://www.instagram.com/tfgsc85_/', '_blank');
     },
     goTozsca() {
-      window.open('https://www.instagram.com/zsca36th/', '_blank');
+      window.open('https://www.instagram.com/zsca37th/', '_blank');
     },
     goTocgcra() {
-      window.open('https://www.instagram.com/cgcra69_official/', '_blank');
+      window.open('https://www.instagram.com/cgcra70_official/', '_blank');
     },
   },
 };
