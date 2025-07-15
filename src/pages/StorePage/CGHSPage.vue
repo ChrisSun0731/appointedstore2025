@@ -12,7 +12,7 @@
           <br />
           <span v-if="$q.screen.gt.xs" class="q-pl-sm"><strong>特約商店-成功篇</strong></span>
           <span v-else><strong>成功篇</strong></span>
-          <br /><br />
+          <br />
         </div>
       </q-card-section>
     </q-card>
@@ -22,7 +22,7 @@
         <strong>點選查看商店</strong><br /><br />
       </div>
       <ckstore />
-      <q-list bordered class="rounded-borders"> </q-list>
+      <q-list bordered class="rounded-borders"></q-list>
     </div>
   </q-page>
 </template>
@@ -31,4 +31,6 @@
 import ckstore from '../item/CKStore.vue';
 </script>
 
-<style scoped></style>
+<style scoped>
+@import '../../css/pages.scss';
+</style>

@@ -36,4 +36,6 @@ import zsstore from '../item/ZSStore.vue';
 const $q = useQuasar();
 </script>
 
-<style scoped></style>
+<style scoped>
+@import '../../css/pages.scss';
+</style>

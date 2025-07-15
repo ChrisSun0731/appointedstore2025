@@ -31,4 +31,6 @@
 import ximenstore from '../item/XiMenStore.vue';
 </script>
 
-<style scoped></style>
+<style scoped>
+@import '../../css/pages.scss';
+</style>

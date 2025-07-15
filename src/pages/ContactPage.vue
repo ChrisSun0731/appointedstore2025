@@ -41,6 +41,7 @@
                 alt="cksc"
                 style="width: 150px; height: 150px"
                 fit="contain"
+                :style="$q.dark.isActive ? 'filter: invert(1) grayscale(1) brightness(200%)' : ''"
               />
             </q-btn>
             <br />
@@ -54,6 +55,7 @@
                 alt="cksc"
                 style="width: 150px; height: 150px"
                 fit="contain"
+                :style="$q.dark.isActive ? 'filter: invert(1) grayscale(1) brightness(200%)' : ''"
               />
             </q-btn>
             <br />
@@ -107,4 +109,8 @@ export default {
     font-size: 16px;
   }
 }
+</style>
+
+<style scoped>
+@import '../css/pages.scss';
 </style>

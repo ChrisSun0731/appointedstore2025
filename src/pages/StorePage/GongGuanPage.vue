@@ -31,4 +31,6 @@
 import gongguanstore from '../item/GongGuanStore.vue';
 </script>
 
-<style scoped></style>
+<style scoped>
+@import '../../css/pages.scss';
+</style>

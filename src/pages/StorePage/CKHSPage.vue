@@ -31,4 +31,6 @@
 import ckstore from '../item/CKStore.vue';
 </script>
 
-<style scoped></style>
+<style scoped>
+@import '../../css/pages.scss';
+</style>

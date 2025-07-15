@@ -1,0 +1,27 @@
+.q-card {
+  border-radius: 5%;
+}
+
+.q-card:hover {
+  transform: translateY(-2px);
+  transition: all 0.3s ease;
+}
+.q-page {
+  background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 50%, #93c5fd 100%);
+}
+
+.q-card {
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 5%;
+}
+
+.body--dark .q-page {
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+}
+
+.body--dark .q-card {
+  background-color: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.1);
+}

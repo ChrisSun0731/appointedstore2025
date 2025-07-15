@@ -31,4 +31,6 @@
 import stationstore from '../item/StationStore.vue';
 </script>
 
-<style scoped></style>
+<style scoped>
+@import '../../css/pages.scss';
+</style>

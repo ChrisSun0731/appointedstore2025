@@ -9,10 +9,12 @@
           fit="contain"
         />
         <div class="text-h4 text-center q-mt-md">
-          <span v-if="$q.screen.gt.xs" class="q-pl-sm"
-            ><strong>建北中成四校聯合特約商店</strong></span
-          >
-          <span v-else><strong>四校特約商店</strong></span>
+          <span v-if="$q.screen.gt.xs" class="q-pl-sm">
+            <strong>建北中成四校聯合特約商店</strong>
+          </span>
+          <span v-else>
+            <strong>四校特約商店</strong>
+          </span>
           <br />
           <br />
         </div>
@@ -20,7 +22,9 @@
 
       <q-separator spaced />
       <q-card-section class="q-pa-md">
-        <div class="text-center q-mt-md" style="font-size: 20px"><strong>關於四校特約</strong></div>
+        <div class="text-center q-mt-md" style="font-size: 20px">
+          <strong>關於四校特約</strong>
+        </div>
         <br />
         <br />
         <div>之後可以寫前言</div>
@@ -29,4 +33,6 @@
   </q-page>
 </template>
 
-<style scoped></style>
+<style scoped>
+@import '../css/pages.scss';
+</style>

@@ -30,5 +30,6 @@
 <script setup lang="ts">
 import otherstore from '../item/OtherStore.vue';
 </script>
-
-<style scoped></style>
+<style scoped>
+@import '../../css/pages.scss';
+</style>

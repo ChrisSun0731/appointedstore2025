@@ -31,3 +31,7 @@
   height: 100vh;
 }
 </style>
+
+<style scoped>
+@import '../css/pages.scss';
+</style>
