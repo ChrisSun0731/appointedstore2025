@@ -2,7 +2,7 @@
   <q-page class="q-pa-md">
     <q-card flat bordered class="q-pa-xl q-mx-auto shadow-2" style="max-width: 700px; width: 100%">
       <q-card-section class="column items-center">
-        <q-img src="/icons/testlogo.svg" alt="testlogo" class="LogoStyle" fit="contain" />
+        <q-img src="/icons/logo.png" alt="logo" class="LogoStyle" fit="contain" />
         <div class="text-h4 text-center q-mt-md">
           <span v-if="$q.screen.gt.xs" class="q-pl-sm">
             <strong>建北中成四校聯合特約商店</strong>
@@ -21,7 +21,7 @@
           <strong>關於四校特約</strong>
         </div>
         <div class="info text-center q-mb-md" style="font-size: 13px">
-          CKSC X TFGSC X CGCRA X ZSCA 2025~2026
+          CKSC X TFGSC X ZSCA X CGCRA 2025~2026
         </div>
         <div class="text-body1">
           <div class="text-center"><strong>【2025四校聯合特約商店】</strong><br /></div>

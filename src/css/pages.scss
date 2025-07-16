@@ -6,40 +6,15 @@
   transform: translateY(-2px);
   transition: all 0.3s ease;
 }
+
 .q-page {
-  background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 50%, #93c5fd 100%);
-}
-
-.q-card {
-  background: rgba(255, 255, 255);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  border-radius: 5%;
-}
-
-.body--dark .q-page {
-  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
-}
-
-.body--dark .q-card {
-  background-color: rgba(255, 255, 255, 0.05);
-  border-color: rgba(255, 255, 255, 0.1);
-}
-
-.body--dark .q-page {
   position: relative;
-  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
-  overflow: hidden;
-}
-
-.body--dark .q-page {
-  position: relative;
-  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+  background: linear-gradient(135deg, #b1d3ff 0%, #8bbfff 30%, #62a8f9 70%, #3891fd 100%);
   overflow: hidden;
   z-index: 0;
 }
 
-.body--dark .q-page::before {
+.q-page::before {
   content: '';
   position: absolute;
   top: -50%;
@@ -47,12 +22,53 @@
   width: 200%;
   height: 200%;
   background:
-    radial-gradient(ellipse at center, rgba(255, 255, 255, 0.15) 0%, transparent 70%),
-    radial-gradient(ellipse at 40% 40%, rgba(255, 255, 255, 0.05) 0%, transparent 60%),
-    radial-gradient(ellipse at 60% 60%, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
-  transform: rotate(25deg);
-  filter: blur(8px);
-  opacity: 0.6;
+    radial-gradient(ellipse at 20% 80%, rgba(147, 197, 253, 0.3) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 20%, rgba(191, 219, 254, 0.4) 0%, transparent 50%),
+    radial-gradient(ellipse at 40% 40%, rgba(219, 234, 254, 0.2) 0%, transparent 50%);
+  animation: float 20s ease-in-out infinite;
+  pointer-events: none;
+  z-index: 0;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-20px) rotate(180deg);
+  }
+}
+
+.q-card {
+  background: rgb(255, 255, 255);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 5%;
+}
+
+.body--dark .q-page {
+  position: relative;
+  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 50%, #0075dc 100%);
+  overflow: hidden;
+  z-index: 0;
+}
+
+.body--dark .q-page::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image:
+    radial-gradient(2px 2px at 20px 30px, rgba(255, 255, 255, 0.8), transparent),
+    radial-gradient(2px 2px at 40px 70px, rgba(255, 255, 255, 0.6), transparent),
+    radial-gradient(1px 1px at 90px 40px, rgba(255, 255, 255, 0.9), transparent),
+    radial-gradient(1px 1px at 130px 80px, rgba(255, 255, 255, 0.7), transparent);
+  background-repeat: repeat;
+  background-size: 200px 100px;
+  animation: particles-move 25s linear infinite;
   z-index: 0;
   pointer-events: none;
 }
@@ -62,30 +78,40 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 200%;
-  height: 200%;
-  background-image:
-    radial-gradient(white 1px, transparent 0), radial-gradient(white 1px, transparent 0),
-    radial-gradient(white 1px, transparent 0);
-  background-size: 200px 200px;
-  background-position:
-    0 0,
-    50px 100px,
-    100px 50px;
-  animation: star-flicker 6s ease-in-out infinite;
-  opacity: 0.3;
+  width: 100%;
+  height: 100%;
+  background:
+    radial-gradient(circle at 30% 40%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 70% 60%, rgba(255, 255, 255, 0.05) 0%, transparent 50%);
+  animation: nebula-drift 20s ease-in-out infinite;
   pointer-events: none;
   z-index: 0;
 }
 
-@keyframes star-flicker {
+@keyframes particles-move {
+  0% {
+    transform: translateX(0) translateY(0);
+  }
+  100% {
+    transform: translateX(-200px) translateY(-100px);
+  }
+}
+
+@keyframes nebula-drift {
   0%,
   100% {
+    transform: scale(1) rotate(0deg);
     opacity: 0.3;
   }
   50% {
-    opacity: 0.6;
+    transform: scale(1.2) rotate(180deg);
+    opacity: 0.7;
   }
+}
+
+.body--dark .q-card {
+  background-color: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.1);
 }
 
 .info {
@@ -142,8 +168,9 @@
 }
 
 .body--dark .guideline-text {
-  color: #d1d5db;
+  color: #ffffff;
 }
+
 @media (max-width: 600px) {
   .content-section {
     padding: 2rem 1.5rem;
@@ -165,9 +192,6 @@
 
 .LogoStyle {
   transition: all 0.3s ease;
-}
-
-.LogoStyle {
   max-width: 40%;
   max-height: 40%;
 }
@@ -195,4 +219,14 @@
     max-height: 70% !important;
     min-width: 140px !important;
   }
+}
+
+.body--dark .q-page > * {
+  position: relative;
+  z-index: 1;
+}
+
+.q-page > * {
+  position: relative;
+  z-index: 1;
 }

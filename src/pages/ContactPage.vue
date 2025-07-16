@@ -2,12 +2,7 @@
   <q-page class="q-pa-md">
     <q-card flat bordered class="q-pa-lg q-mx-auto" style="max-width: 700px; width: 100%">
       <q-card-section class="column items-center">
-        <q-img
-          src="../../public/icons/testlogo.svg"
-          alt="testlogo"
-          class="LogoStyle"
-          fit="contain"
-        />
+        <q-img src="../../public/icons/logo.png" alt="logo" class="LogoStyle" fit="contain" />
         <br />
         <h4 class="text-center"><strong>建北中成四校聯合特約商店</strong></h4>
       </q-card-section>
@@ -18,7 +13,6 @@
         <div class="text-h6 text-center q-mt-md">
           <br />
           <strong>如有任何問題，歡迎聯繫各校班代聯</strong>
-          <!--之後換成各校班聯ｌｏｇｏ-->
           <br /><br />
         </div>
         <div class="row items-center">

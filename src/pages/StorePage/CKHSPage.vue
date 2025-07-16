@@ -3,8 +3,8 @@
     <q-card flat bordered class="q-pa-xl q-mx-auto shadow-2" style="max-width: 700px; width: 100%">
       <q-card-section class="column items-center">
         <q-img
-          src="../../../public/icons/ckhslogo.png"
-          alt="cklogo"
+          src="../../../public/icons/cksclogo.png"
+          alt="cksclogo"
           class="LogoStyle"
           fit="contain"
         />

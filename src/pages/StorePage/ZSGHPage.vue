@@ -3,8 +3,8 @@
     <q-card flat bordered class="q-pa-xl q-mx-auto shadow-2" style="max-width: 700px; width: 100%">
       <q-card-section class="column items-center">
         <q-img
-          src="/icons/zsghlogo.png"
-          alt="zslogo"
+          src="/icons/zscalogo.png"
+          alt="zscalogo"
           class="LogoStyle"
           fit="contain"
           :style="$q.dark.isActive ? 'filter: invert(1) grayscale(1) brightness(200%)' : ''"
