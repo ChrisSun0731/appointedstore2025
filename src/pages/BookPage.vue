@@ -27,11 +27,8 @@
 </template>
 
 <style scoped>
+@import '../css/pages.scss';
 .q-page {
   height: 100vh;
 }
-</style>
-
-<style scoped>
-@import '../css/pages.scss';
 </style>
