@@ -59,7 +59,7 @@ const linksList: EssentialLinkProps[] = [
   { title: '公館', icon: 'local_mall', link: '/gongguan' },
   { title: '其他', icon: 'other_houses', link: '/other' },
   { title: '聯絡我們', icon: 'mail', link: '/contact' },
-  { title: '關於本平台', icon: 'info', link: '/about' },
+  { title: '關於與條款', icon: 'info', link: '/about' },
 ];
 
 function toggleLeftDrawer() {

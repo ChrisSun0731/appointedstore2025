@@ -50,11 +50,10 @@
           <div class="col-6 text-center">
             <q-btn flat round size="xl" color="grey-2" class="q-pa-none" @click="goTozsca">
               <q-img
-                src="../../public/icons/zsghlogo.png"
-                alt="cksc"
+                src="../../public/icons/zscalogo.png"
+                alt="zsca"
                 style="width: 150px; height: 150px"
                 fit="contain"
-                :style="$q.dark.isActive ? 'filter: invert(1) grayscale(1) brightness(200%)' : ''"
               />
             </q-btn>
             <br />
@@ -63,7 +62,7 @@
           <div class="col-6 text-center">
             <q-btn flat round size="xl" color="grey-2" class="q-pa-none" @click="goTocgcra">
               <q-img
-                src="../../public/icons/cghslogo.png"
+                src="../../public/icons/cgcralogo.png"
                 alt="cksc"
                 style="width: 150px; height: 150px"
                 fit="contain"
