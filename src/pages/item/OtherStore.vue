@@ -35,11 +35,40 @@ export default {
     return {
       stores: [
         {
-          name: '大立溫州大餛鈍',
-          address: '台北市中正區公園路20巷2號',
-          phone: '(02)2375-9214',
-          discount: '50元以上商品折扣5元',
-          mapUrl: 'https://www.google.com/maps?q=台北市中正區公園路20巷2號',
+          name: 'らあめん花月嵐 信義威秀店',
+          address: '台北市信義區松壽路20號2樓',
+          phone: '(02)2729-2128',
+          category: '熱食',
+          discount: 'unknown',
+          mapUrl:
+            'https://www.google.com/maps/search/?api=1&query=らあめん花月嵐+信義威秀店+台北市信義區松壽路20號2樓',
+        },
+        {
+          name: '演色—捷運古亭',
+          address: '台北市中正區羅斯福路二段50號一樓',
+          phone: '(02)2327-8022',
+          category: '服飾',
+          discount: 'unknown',
+          mapUrl:
+            'https://www.google.com/maps/search/?api=1&query=演色—捷運古亭+台北市中正區羅斯福路二段50號一樓',
+        },
+        {
+          name: '宥朋團體服紀念品',
+          address: '新北市三重區永福街216號1樓',
+          phone: '0989-800765',
+          category: '服飾',
+          discount: 'unknown',
+          mapUrl:
+            'https://www.google.com/maps/search/?api=1&query=宥朋團體服紀念品+新北市三重區永福街216號1樓',
+        },
+        {
+          name: '采豐數位股份有限公司',
+          address: '新北市中和區宜安路112號7樓',
+          phone: '(02)8945-8912',
+          category: '服飾',
+          discount: 'unknown',
+          mapUrl:
+            'https://www.google.com/maps/search/?api=1&query=采豐數位股份有限公司+新北市中和區宜安路112號7樓',
         },
       ],
     };

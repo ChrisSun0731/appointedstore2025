@@ -5,7 +5,7 @@
         <q-btn flat dense round icon="menu" aria-label="Menu" @click="toggleLeftDrawer" />
         <q-toolbar-title>
           <q-avatar>
-            <img alt="favicon" src="icons/testlogo.svg" height="50px" width="50px" />
+            <img alt="favicon" src="icons/logo.png" max-height="20px" max-width="20px" />
           </q-avatar>
           <span v-if="$q.screen.gt.xs" class="q-pl-sm">建北中成四校聯合特約商店</span>
           <span v-else class="q-pl-sm">四校聯合特約商店</span>

@@ -35,11 +35,31 @@ export default {
     return {
       stores: [
         {
-          name: '大立溫州大餛鈍',
-          address: '台北市中正區公園路20巷2號',
-          phone: '(02)2375-9214',
-          discount: '50元以上商品折扣5元',
-          mapUrl: 'https://www.google.com/maps?q=台北市中正區公園路20巷2號',
+          name: '得正#台北公館計劃',
+          address: '100台北市中正區羅斯福路三段316巷10-2號',
+          phone: '(02)2368-3130',
+          category: '飲料',
+          discount: 'unknown',
+          mapUrl:
+            'https://www.google.com/maps/search/?api=1&query=得正+台北公館計劃+台北市中正區羅斯福路三段316巷10-2號',
+        },
+        {
+          name: '可不可熟成紅茶 台北公館店',
+          address: '100台北市中正區汀州路三段174號',
+          phone: '(02)2368-0260',
+          category: '飲料',
+          discount: 'unknown',
+          mapUrl:
+            'https://www.google.com/maps/search/?api=1&query=可不可熟成紅茶+台北公館店+台北市中正區汀州路三段174號',
+        },
+        {
+          name: '迷客夏Milksha 臺北公館',
+          address: '10090台北市中正區羅斯福路三段316巷10之2號1樓',
+          phone: '(02)2368-7707',
+          category: '飲料',
+          discount: 'unknown',
+          mapUrl:
+            'https://www.google.com/maps/search/?api=1&query=迷客夏Milksha+臺北公館+台北市中正區羅斯福路三段316巷10之2號1樓',
         },
       ],
     };

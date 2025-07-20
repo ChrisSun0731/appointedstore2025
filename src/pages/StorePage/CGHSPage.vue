@@ -21,14 +21,14 @@
       <div class="text-center" style="font-size: 20px">
         <strong>點選查看商店</strong><br /><br />
       </div>
-      <ckstore />
+      <cgstore />
       <q-list bordered class="rounded-borders"></q-list>
     </div>
   </q-page>
 </template>
 
 <script setup lang="ts">
-import ckstore from '../item/CKStore.vue';
+import cgstore from '../item/CGStore.vue';
 </script>
 
 <style scoped>
