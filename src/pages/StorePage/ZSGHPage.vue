@@ -2,13 +2,7 @@
   <q-page class="q-pa-md">
     <q-card flat bordered class="q-pa-xl q-mx-auto shadow-2" style="max-width: 700px; width: 100%">
       <q-card-section class="column items-center">
-        <q-img
-          src="/icons/zscalogo.png"
-          alt="zscalogo"
-          class="LogoStyle"
-          fit="contain"
-          :style="$q.dark.isActive ? 'filter: invert(1) grayscale(1) brightness(200%)' : ''"
-        />
+        <q-img src="/icons/zscalogo.png" alt="zscalogo" class="LogoStyle" fit="contain" />
 
         <div class="text-h4 text-center q-mt-md">
           <br />

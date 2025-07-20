@@ -1,232 +1,314 @@
 <template>
-  <q-expansion-item
-    v-for="(store, index) in stores"
-    :key="index"
-    expand-separator
-    icon="list"
-    :label="store.name"
-    default
-    style="text-align: left"
-  >
-    <div class="row items-center">
-      <div class="col-1 column"></div>
-      <div class="col-7 column">
-        <div><strong>地址</strong>：{{ store.address }}</div>
-        <div><strong>電話</strong>：{{ store.phone }}</div>
-        <div><strong>優惠內容</strong>：{{ store.discount }}</div>
+  <div>
+    <div v-if="getStoresByCategory('熱食').length > 0" class="category-section">
+      <q-separator />
+      <div class="category-header q-pa-md">
+        <q-icon name="restaurant" size="md" class="q-mr-sm" />
+        <span class="category-title text-h6 text-weight-bold">熱食類</span>
       </div>
-      <div class="col-4 flex flex-left">
-        <q-btn flat round size="xl" color="grey-2" class="q-pa-none" @click="goToMap(store.mapUrl)">
-          <q-img
-            src="/icons/googlemap.png"
-            alt="googlemap"
-            style="width: 60px; height: 60px"
-            fit="contain"
-          />
-        </q-btn>
-      </div>
+      <q-expansion-item
+        v-for="(store, index) in getStoresByCategory('熱食')"
+        :key="`hot-${index}`"
+        expand-separator
+        icon="restaurant"
+        :label="store.name"
+        style="text-align: left"
+      >
+        <div class="row items-center q-pa-md">
+          <div class="col-1"></div>
+          <div class="col-7">
+            <div class="q-mb-xs"><strong>地址</strong>：{{ store.address }}</div>
+            <div class="q-mb-xs"><strong>電話</strong>：{{ store.phone }}</div>
+            <div><strong>優惠內容</strong>：{{ store.discount }}</div>
+          </div>
+          <div class="col-4 flex justify-end">
+            <q-btn
+              flat
+              round
+              size="xl"
+              color="grey-2"
+              class="q-pa-none"
+              @click="goToMap(store.mapUrl)"
+            >
+              <q-img
+                src="/icons/googlemap.png"
+                alt="googlemap"
+                style="width: 60px; height: 60px"
+                fit="contain"
+              />
+            </q-btn>
+          </div>
+        </div>
+      </q-expansion-item>
     </div>
-  </q-expansion-item>
+
+    <div v-if="getStoresByCategory('早午餐').length > 0" class="category-section">
+      <q-separator />
+      <div class="category-header q-pa-md">
+        <q-icon name="free_breakfast" size="md" class="q-mr-sm" />
+        <span class="category-title text-h6 text-weight-bold">早午餐類</span>
+      </div>
+      <q-expansion-item
+        v-for="(store, index) in getStoresByCategory('早午餐')"
+        :key="`breakfast-${index}`"
+        expand-separator
+        icon="free_breakfast"
+        :label="store.name"
+        style="text-align: left"
+      >
+        <div class="row items-center q-pa-md">
+          <div class="col-1"></div>
+          <div class="col-7">
+            <div class="q-mb-xs"><strong>地址</strong>：{{ store.address }}</div>
+            <div class="q-mb-xs"><strong>電話</strong>：{{ store.phone }}</div>
+            <div><strong>優惠內容</strong>：{{ store.discount }}</div>
+          </div>
+          <div class="col-4 flex justify-end">
+            <q-btn
+              flat
+              round
+              size="xl"
+              color="grey-2"
+              class="q-pa-none"
+              @click="goToMap(store.mapUrl)"
+            >
+              <q-img
+                src="/icons/googlemap.png"
+                alt="googlemap"
+                style="width: 60px; height: 60px"
+                fit="contain"
+              />
+            </q-btn>
+          </div>
+        </div>
+      </q-expansion-item>
+    </div>
+
+    <div v-if="getStoresByCategory('速食').length > 0" class="category-section">
+      <q-separator />
+      <div class="category-header q-pa-md">
+        <q-icon name="fastfood" size="md" class="q-mr-sm" />
+        <span class="category-title text-h6 text-weight-bold">速食類</span>
+      </div>
+      <q-expansion-item
+        v-for="(store, index) in getStoresByCategory('速食')"
+        :key="`fastfood-${index}`"
+        expand-separator
+        icon="fastfood"
+        :label="store.name"
+        style="text-align: left"
+      >
+        <div class="row items-center q-pa-md">
+          <div class="col-1"></div>
+          <div class="col-7">
+            <div class="q-mb-xs"><strong>地址</strong>：{{ store.address }}</div>
+            <div class="q-mb-xs"><strong>電話</strong>：{{ store.phone }}</div>
+            <div><strong>優惠內容</strong>：{{ store.discount }}</div>
+          </div>
+          <div class="col-4 flex justify-end">
+            <q-btn
+              flat
+              round
+              size="xl"
+              color="grey-2"
+              class="q-pa-none"
+              @click="goToMap(store.mapUrl)"
+            >
+              <q-img
+                src="/icons/googlemap.png"
+                alt="googlemap"
+                style="width: 60px; height: 60px"
+                fit="contain"
+              />
+            </q-btn>
+          </div>
+        </div>
+      </q-expansion-item>
+    </div>
+
+    <div v-if="getStoresByCategory('飲料').length > 0" class="category-section">
+      <q-separator />
+      <div class="category-header q-pa-md">
+        <q-icon name="local_drink" size="md" class="q-mr-sm" />
+        <span class="category-title text-h6 text-weight-bold">飲料類</span>
+      </div>
+      <q-expansion-item
+        v-for="(store, index) in getStoresByCategory('飲料')"
+        :key="`drink-${index}`"
+        expand-separator
+        icon="local_drink"
+        :label="store.name"
+        style="text-align: left"
+      >
+        <div class="row items-center q-pa-md">
+          <div class="col-1"></div>
+          <div class="col-7">
+            <div class="q-mb-xs"><strong>地址</strong>：{{ store.address }}</div>
+            <div class="q-mb-xs"><strong>電話</strong>：{{ store.phone }}</div>
+            <div><strong>優惠內容</strong>：{{ store.discount }}</div>
+          </div>
+          <div class="col-4 flex justify-end">
+            <q-btn
+              flat
+              round
+              size="xl"
+              color="grey-2"
+              class="q-pa-none"
+              @click="goToMap(store.mapUrl)"
+            >
+              <q-img
+                src="/icons/googlemap.png"
+                alt="googlemap"
+                style="width: 60px; height: 60px"
+                fit="contain"
+              />
+            </q-btn>
+          </div>
+        </div>
+      </q-expansion-item>
+    </div>
+
+    <div v-if="getStoresByCategory('甜點').length > 0" class="category-section">
+      <q-separator />
+      <div class="category-header q-pa-md">
+        <q-icon name="cake" size="md" class="q-mr-sm" />
+        <span class="category-title text-h6 text-weight-bold">甜點類</span>
+      </div>
+      <q-expansion-item
+        v-for="(store, index) in getStoresByCategory('甜點')"
+        :key="`dessert-${index}`"
+        expand-separator
+        icon="cake"
+        :label="store.name"
+        style="text-align: left"
+      >
+        <div class="row items-center q-pa-md">
+          <div class="col-1"></div>
+          <div class="col-7">
+            <div class="q-mb-xs"><strong>地址</strong>：{{ store.address }}</div>
+            <div class="q-mb-xs"><strong>電話</strong>：{{ store.phone }}</div>
+            <div><strong>優惠內容</strong>：{{ store.discount }}</div>
+          </div>
+          <div class="col-4 flex justify-end">
+            <q-btn
+              flat
+              round
+              size="xl"
+              color="grey-2"
+              class="q-pa-none"
+              @click="goToMap(store.mapUrl)"
+            >
+              <q-img
+                src="/icons/googlemap.png"
+                alt="googlemap"
+                style="width: 60px; height: 60px"
+                fit="contain"
+              />
+            </q-btn>
+          </div>
+        </div>
+      </q-expansion-item>
+    </div>
+
+    <div v-if="getStoresByCategory('點心').length > 0" class="category-section">
+      <q-separator />
+      <div class="category-header q-pa-md">
+        <q-icon name="local_cafe" size="md" class="q-mr-sm" />
+        <span class="category-title text-h6 text-weight-bold">點心類</span>
+      </div>
+      <q-expansion-item
+        v-for="(store, index) in getStoresByCategory('點心')"
+        :key="`snack-${index}`"
+        expand-separator
+        icon="local_cafe"
+        :label="store.name"
+        style="text-align: left"
+      >
+        <div class="row items-center q-pa-md">
+          <div class="col-1"></div>
+          <div class="col-7">
+            <div class="q-mb-xs"><strong>地址</strong>：{{ store.address }}</div>
+            <div class="q-mb-xs"><strong>電話</strong>：{{ store.phone }}</div>
+            <div><strong>優惠內容</strong>：{{ store.discount }}</div>
+          </div>
+          <div class="col-4 flex justify-end">
+            <q-btn
+              flat
+              round
+              size="xl"
+              color="grey-2"
+              class="q-pa-none"
+              @click="goToMap(store.mapUrl)"
+            >
+              <q-img
+                src="/icons/googlemap.png"
+                alt="googlemap"
+                style="width: 60px; height: 60px"
+                fit="contain"
+              />
+            </q-btn>
+          </div>
+        </div>
+      </q-expansion-item>
+    </div>
+
+    <div v-if="getOtherStores().length > 0" class="category-section">
+      <q-separator />
+      <div class="category-header q-pa-md">
+        <q-icon name="more_horiz" size="md" class="q-mr-sm" />
+        <span class="category-title text-h6 text-weight-bold">其他類</span>
+      </div>
+      <q-expansion-item
+        v-for="(store, index) in getOtherStores()"
+        :key="`other-${index}`"
+        expand-separator
+        icon="more_horiz"
+        :label="store.name"
+        style="text-align: left"
+      >
+        <div class="row items-center q-pa-md">
+          <div class="col-1"></div>
+          <div class="col-7">
+            <div class="q-mb-xs"><strong>地址</strong>：{{ store.address }}</div>
+            <div class="q-mb-xs"><strong>電話</strong>：{{ store.phone }}</div>
+            <div><strong>優惠內容</strong>：{{ store.discount }}</div>
+          </div>
+          <div class="col-4 flex justify-end">
+            <q-btn
+              flat
+              round
+              size="xl"
+              color="grey-2"
+              class="q-pa-none"
+              @click="goToMap(store.mapUrl)"
+            >
+              <q-img
+                src="/icons/googlemap.png"
+                alt="googlemap"
+                style="width: 60px; height: 60px"
+                fit="contain"
+              />
+            </q-btn>
+          </div>
+        </div>
+      </q-expansion-item>
+    </div>
+  </div>
 </template>
 
 <script lang="ts">
+import { stores, getStoresByCategory, getOtherStores, goToMap } from './ts/StationStore';
+
 export default {
   data() {
     return {
-      stores: [
-        {
-          name: '十三川日本拉麵定食 公園店',
-          address: '台北市中正區公園路18號2樓',
-          phone: '0908-181-190',
-          category: '熱食',
-          discount: 'unknown',
-          mapUrl:
-            'https://www.google.com/maps/search/?api=1&query=十三川日本拉麵定食+台北市中正區公園路18號',
-        },
-        {
-          name: '大立溫州大餛飩',
-          address: '台北市中正區公園路20巷2號',
-          phone: '(02)2375-9214',
-          category: '熱食',
-          discount: 'unknown',
-          mapUrl:
-            'https://www.google.com/maps/search/?api=1&query=大立溫州大餛飩+台北市中正區公園路20巷2號',
-        },
-        {
-          name: 'best義pasta食堂',
-          address: '台北市中正區南陽街3號2樓',
-          phone: '(02)2370-2568',
-          category: '熱食',
-          discount: 'unknown',
-          mapUrl:
-            'https://www.google.com/maps/search/?api=1&query=best義pasta食堂+台北市中正區南陽街3號',
-        },
-        {
-          name: '玖仰 信陽門市',
-          address: '台北市中正區信陽街6-2號',
-          phone: '(02)2311-7746',
-          category: '熱食',
-          discount: 'unknown',
-          mapUrl: 'https://www.google.com/maps/search/?api=1&query=玖仰+台北市中正區信陽街6-2號',
-        },
-        {
-          name: '砸鍋賣鐵 中正',
-          address: '台北市中正區漢口街一段35號2樓',
-          phone: '(02)2388-8301',
-          category: '熱食',
-          discount: 'unknown',
-          mapUrl:
-            'https://www.google.com/maps/search/?api=1&query=砸鍋賣鐵+台北市中正區漢口街一段35號',
-        },
-        {
-          name: '吉豚屋北車店',
-          address: '台北市中正區忠孝西路一段36號B1',
-          phone: '(02)2311-3318',
-          category: '熱食',
-          discount: 'unknown',
-          mapUrl:
-            'https://www.google.com/maps/search/?api=1&query=吉豚屋+台北市中正區忠孝西路一段36號',
-        },
-        {
-          name: '雲客來刀削麵館',
-          address: '台北市中正區忠孝西路一段100號',
-          phone: '(02)2370-5111',
-          category: '熱食',
-          discount: 'unknown',
-          mapUrl:
-            'https://www.google.com/maps/search/?api=1&query=雲客來刀削麵館+台北市中正區忠孝西路一段100號',
-        },
-        {
-          name: '洋庭坊義大利麵（重慶店）',
-          address: '台北市中正區重慶南路一段63號',
-          phone: '(02)2578-5177',
-          category: '熱食',
-          discount: 'unknown',
-          mapUrl:
-            'https://www.google.com/maps/search/?api=1&query=洋庭坊義大利麵+台北市中正區重慶南路一段63號',
-        },
-        {
-          name: '丸龜製麵 台北地下街店',
-          address: '台北市大同區忠孝西路一段 K區地下街47號',
-          phone: '0800-000-063',
-          category: '熱食',
-          discount: 'unknown',
-          mapUrl: 'https://www.google.com/maps/search/?api=1&query=丸龜製麵+台北地下街+K區47號',
-        },
-        {
-          name: '得正#北車信陽計劃',
-          address: '台北市中正區信陽街13之1號',
-          phone: '(02)2311-0977',
-          category: '飲料',
-          discount: 'unknown',
-          mapUrl: 'https://www.google.com/maps/search/?api=1&query=得正+台北市中正區信陽街13之1號',
-        },
-        {
-          name: '可不可熟成紅茶-台北站前店',
-          address: '台北市中正區南陽街34號',
-          phone: '(02)2370-0600',
-          category: '飲料',
-          discount: 'unknown',
-          mapUrl:
-            'https://www.google.com/maps/search/?api=1&query=可不可熟成紅茶+台北市中正區南陽街34號',
-        },
-        {
-          name: 'COMEBUY_台北南陽店',
-          address: '台北市中正區許昌街26-2號',
-          phone: '(02)2361-1255',
-          category: '飲料',
-          discount: 'unknown',
-          mapUrl:
-            'https://www.google.com/maps/search/?api=1&query=COMEBUY+台北市中正區許昌街26-2號',
-        },
-        {
-          name: '咕咕鬆餅屋',
-          address: '台北市中正區開封街一段2-52號',
-          phone: '(02)2382-2782',
-          category: '甜點',
-          discount: 'unknown',
-          mapUrl:
-            'https://www.google.com/maps/search/?api=1&query=咕咕鬆餅屋+台北市中正區開封街一段2-52號',
-        },
-        {
-          name: '小山之丘麵包台北站前店',
-          address: '台北市中正區許昌街8號',
-          phone: '(02)2331-7978',
-          category: '點心',
-          discount: 'unknown',
-          mapUrl:
-            'https://www.google.com/maps/search/?api=1&query=小山之丘麵包+台北市中正區許昌街8號',
-        },
-        {
-          name: '三民書局 (重南店)',
-          address: '台北市中正區重慶南路一段61號',
-          phone: '(02)2361-7511',
-          category: '其他',
-          discount: 'unknown',
-          mapUrl:
-            'https://www.google.com/maps/search/?api=1&query=三民書局+台北市中正區重慶南路一段61號',
-        },
-        {
-          name: 'K書會館',
-          address: '台北市中正區南陽街20號2樓',
-          phone: '(02)2375-4033',
-          category: '其他',
-          discount: 'unknown',
-          mapUrl: 'https://www.google.com/maps/search/?api=1&query=K書會館+台北市中正區南陽街20號',
-        },
-        {
-          name: '卯時設計有限公司',
-          address: '台北市大同區太原路8巷3號',
-          phone: '(02)2311-0357',
-          category: '服飾',
-          discount: 'unknown',
-          mapUrl:
-            'https://www.google.com/maps/search/?api=1&query=卯時設計+台北市大同區太原路8巷3號',
-        },
-        {
-          name: '服麗社團禮服',
-          address: '台北市中正區懷寧街17號5樓',
-          phone: '(02)2331-5750',
-          category: '服飾',
-          discount: 'unknown',
-          mapUrl:
-            'https://www.google.com/maps/search/?api=1&query=服麗社團禮服+台北市中正區懷寧街17號',
-        },
-        {
-          name: '服麗社團禮服',
-          address: '台北市中正區懷寧街17號5樓',
-          phone: '(02)2331-5750',
-          category: '服飾',
-          discount: 'unknown',
-          mapUrl:
-            'https://www.google.com/maps/search/?api=1&query=服麗社團禮服+台北市中正區懷寧街17號',
-        },
-        {
-          name: '五大唱片台北站前店',
-          address: '台北市中正區南陽街1號2樓',
-          phone: '(02)2388-9202',
-          category: '音樂',
-          discount: 'unknown',
-          mapUrl: 'https://www.google.com/maps/search/?api=1&query=五大唱片+台北市中正區南陽街1號',
-        },
-        {
-          name: '北車0.3熱門音樂中心',
-          address: '台北市中正區忠孝西路一段7號1樓',
-          phone: '(02)2383-1780',
-          category: '音樂',
-          discount: 'unknown',
-          mapUrl:
-            'https://www.google.com/maps/search/?api=1&query=北車0.3熱門音樂中心+台北市中正區忠孝西路一段7號',
-        },
-      ],
+      stores,
     };
   },
   methods: {
-    goToMap(url: string) {
-      window.open(url, '_blank');
-    },
+    getStoresByCategory,
+    getOtherStores,
+    goToMap,
   },
 };
 </script>
-
-<style scoped></style>

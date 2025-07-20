@@ -1,190 +1,314 @@
 <template>
-  <q-expansion-item
-    v-for="(store, index) in stores"
-    :key="index"
-    expand-separator
-    icon="list"
-    :label="store.name"
-    default
-    style="text-align: left"
-  >
-    <div class="row items-center">
-      <div class="col-1 column"></div>
-      <div class="col-7 column">
-        <div><strong>地址</strong>：{{ store.address }}</div>
-        <div><strong>電話</strong>：{{ store.phone }}</div>
-        <div><strong>優惠內容</strong>：{{ store.discount }}</div>
+  <div>
+    <div v-if="getStoresByCategory('熱食').length > 0" class="category-section">
+      <q-separator />
+      <div class="category-header q-pa-md">
+        <q-icon name="restaurant" size="md" class="q-mr-sm" />
+        <span class="category-title text-h6 text-weight-bold">熱食類</span>
       </div>
-      <div class="col-4 flex flex-left">
-        <q-btn flat round size="xl" color="grey-2" class="q-pa-none" @click="goToMap(store.mapUrl)">
-          <q-img
-            src="/icons/googlemap.png"
-            alt="googlemap"
-            style="width: 60px; height: 60px"
-            fit="contain"
-          />
-        </q-btn>
-      </div>
+      <q-expansion-item
+        v-for="(store, index) in getStoresByCategory('熱食')"
+        :key="`hot-${index}`"
+        expand-separator
+        icon="restaurant"
+        :label="store.name"
+        style="text-align: left"
+      >
+        <div class="row items-center q-pa-md">
+          <div class="col-1"></div>
+          <div class="col-7">
+            <div class="q-mb-xs"><strong>地址</strong>：{{ store.address }}</div>
+            <div class="q-mb-xs"><strong>電話</strong>：{{ store.phone }}</div>
+            <div><strong>優惠內容</strong>：{{ store.discount }}</div>
+          </div>
+          <div class="col-4 flex justify-end">
+            <q-btn
+              flat
+              round
+              size="xl"
+              color="grey-2"
+              class="q-pa-none"
+              @click="goToMap(store.mapUrl)"
+            >
+              <q-img
+                src="/icons/googlemap.png"
+                alt="googlemap"
+                style="width: 60px; height: 60px"
+                fit="contain"
+              />
+            </q-btn>
+          </div>
+        </div>
+      </q-expansion-item>
     </div>
-  </q-expansion-item>
+
+    <div v-if="getStoresByCategory('早午餐').length > 0" class="category-section">
+      <q-separator />
+      <div class="category-header q-pa-md">
+        <q-icon name="free_breakfast" size="md" class="q-mr-sm" />
+        <span class="category-title text-h6 text-weight-bold">早午餐類</span>
+      </div>
+      <q-expansion-item
+        v-for="(store, index) in getStoresByCategory('早午餐')"
+        :key="`breakfast-${index}`"
+        expand-separator
+        icon="free_breakfast"
+        :label="store.name"
+        style="text-align: left"
+      >
+        <div class="row items-center q-pa-md">
+          <div class="col-1"></div>
+          <div class="col-7">
+            <div class="q-mb-xs"><strong>地址</strong>：{{ store.address }}</div>
+            <div class="q-mb-xs"><strong>電話</strong>：{{ store.phone }}</div>
+            <div><strong>優惠內容</strong>：{{ store.discount }}</div>
+          </div>
+          <div class="col-4 flex justify-end">
+            <q-btn
+              flat
+              round
+              size="xl"
+              color="grey-2"
+              class="q-pa-none"
+              @click="goToMap(store.mapUrl)"
+            >
+              <q-img
+                src="/icons/googlemap.png"
+                alt="googlemap"
+                style="width: 60px; height: 60px"
+                fit="contain"
+              />
+            </q-btn>
+          </div>
+        </div>
+      </q-expansion-item>
+    </div>
+
+    <div v-if="getStoresByCategory('速食').length > 0" class="category-section">
+      <q-separator />
+      <div class="category-header q-pa-md">
+        <q-icon name="fastfood" size="md" class="q-mr-sm" />
+        <span class="category-title text-h6 text-weight-bold">速食類</span>
+      </div>
+      <q-expansion-item
+        v-for="(store, index) in getStoresByCategory('速食')"
+        :key="`fastfood-${index}`"
+        expand-separator
+        icon="fastfood"
+        :label="store.name"
+        style="text-align: left"
+      >
+        <div class="row items-center q-pa-md">
+          <div class="col-1"></div>
+          <div class="col-7">
+            <div class="q-mb-xs"><strong>地址</strong>：{{ store.address }}</div>
+            <div class="q-mb-xs"><strong>電話</strong>：{{ store.phone }}</div>
+            <div><strong>優惠內容</strong>：{{ store.discount }}</div>
+          </div>
+          <div class="col-4 flex justify-end">
+            <q-btn
+              flat
+              round
+              size="xl"
+              color="grey-2"
+              class="q-pa-none"
+              @click="goToMap(store.mapUrl)"
+            >
+              <q-img
+                src="/icons/googlemap.png"
+                alt="googlemap"
+                style="width: 60px; height: 60px"
+                fit="contain"
+              />
+            </q-btn>
+          </div>
+        </div>
+      </q-expansion-item>
+    </div>
+
+    <div v-if="getStoresByCategory('飲料').length > 0" class="category-section">
+      <q-separator />
+      <div class="category-header q-pa-md">
+        <q-icon name="local_drink" size="md" class="q-mr-sm" />
+        <span class="category-title text-h6 text-weight-bold">飲料類</span>
+      </div>
+      <q-expansion-item
+        v-for="(store, index) in getStoresByCategory('飲料')"
+        :key="`drink-${index}`"
+        expand-separator
+        icon="local_drink"
+        :label="store.name"
+        style="text-align: left"
+      >
+        <div class="row items-center q-pa-md">
+          <div class="col-1"></div>
+          <div class="col-7">
+            <div class="q-mb-xs"><strong>地址</strong>：{{ store.address }}</div>
+            <div class="q-mb-xs"><strong>電話</strong>：{{ store.phone }}</div>
+            <div><strong>優惠內容</strong>：{{ store.discount }}</div>
+          </div>
+          <div class="col-4 flex justify-end">
+            <q-btn
+              flat
+              round
+              size="xl"
+              color="grey-2"
+              class="q-pa-none"
+              @click="goToMap(store.mapUrl)"
+            >
+              <q-img
+                src="/icons/googlemap.png"
+                alt="googlemap"
+                style="width: 60px; height: 60px"
+                fit="contain"
+              />
+            </q-btn>
+          </div>
+        </div>
+      </q-expansion-item>
+    </div>
+
+    <div v-if="getStoresByCategory('甜點').length > 0" class="category-section">
+      <q-separator />
+      <div class="category-header q-pa-md">
+        <q-icon name="cake" size="md" class="q-mr-sm" />
+        <span class="category-title text-h6 text-weight-bold">甜點類</span>
+      </div>
+      <q-expansion-item
+        v-for="(store, index) in getStoresByCategory('甜點')"
+        :key="`dessert-${index}`"
+        expand-separator
+        icon="cake"
+        :label="store.name"
+        style="text-align: left"
+      >
+        <div class="row items-center q-pa-md">
+          <div class="col-1"></div>
+          <div class="col-7">
+            <div class="q-mb-xs"><strong>地址</strong>：{{ store.address }}</div>
+            <div class="q-mb-xs"><strong>電話</strong>：{{ store.phone }}</div>
+            <div><strong>優惠內容</strong>：{{ store.discount }}</div>
+          </div>
+          <div class="col-4 flex justify-end">
+            <q-btn
+              flat
+              round
+              size="xl"
+              color="grey-2"
+              class="q-pa-none"
+              @click="goToMap(store.mapUrl)"
+            >
+              <q-img
+                src="/icons/googlemap.png"
+                alt="googlemap"
+                style="width: 60px; height: 60px"
+                fit="contain"
+              />
+            </q-btn>
+          </div>
+        </div>
+      </q-expansion-item>
+    </div>
+
+    <div v-if="getStoresByCategory('點心').length > 0" class="category-section">
+      <q-separator />
+      <div class="category-header q-pa-md">
+        <q-icon name="local_cafe" size="md" class="q-mr-sm" />
+        <span class="category-title text-h6 text-weight-bold">點心類</span>
+      </div>
+      <q-expansion-item
+        v-for="(store, index) in getStoresByCategory('點心')"
+        :key="`snack-${index}`"
+        expand-separator
+        icon="local_cafe"
+        :label="store.name"
+        style="text-align: left"
+      >
+        <div class="row items-center q-pa-md">
+          <div class="col-1"></div>
+          <div class="col-7">
+            <div class="q-mb-xs"><strong>地址</strong>：{{ store.address }}</div>
+            <div class="q-mb-xs"><strong>電話</strong>：{{ store.phone }}</div>
+            <div><strong>優惠內容</strong>：{{ store.discount }}</div>
+          </div>
+          <div class="col-4 flex justify-end">
+            <q-btn
+              flat
+              round
+              size="xl"
+              color="grey-2"
+              class="q-pa-none"
+              @click="goToMap(store.mapUrl)"
+            >
+              <q-img
+                src="/icons/googlemap.png"
+                alt="googlemap"
+                style="width: 60px; height: 60px"
+                fit="contain"
+              />
+            </q-btn>
+          </div>
+        </div>
+      </q-expansion-item>
+    </div>
+
+    <div v-if="getOtherStores().length > 0" class="category-section">
+      <q-separator />
+      <div class="category-header q-pa-md">
+        <q-icon name="more_horiz" size="md" class="q-mr-sm" />
+        <span class="category-title text-h6 text-weight-bold">其他類</span>
+      </div>
+      <q-expansion-item
+        v-for="(store, index) in getOtherStores()"
+        :key="`other-${index}`"
+        expand-separator
+        icon="more_horiz"
+        :label="store.name"
+        style="text-align: left"
+      >
+        <div class="row items-center q-pa-md">
+          <div class="col-1"></div>
+          <div class="col-7">
+            <div class="q-mb-xs"><strong>地址</strong>：{{ store.address }}</div>
+            <div class="q-mb-xs"><strong>電話</strong>：{{ store.phone }}</div>
+            <div><strong>優惠內容</strong>：{{ store.discount }}</div>
+          </div>
+          <div class="col-4 flex justify-end">
+            <q-btn
+              flat
+              round
+              size="xl"
+              color="grey-2"
+              class="q-pa-none"
+              @click="goToMap(store.mapUrl)"
+            >
+              <q-img
+                src="/icons/googlemap.png"
+                alt="googlemap"
+                style="width: 60px; height: 60px"
+                fit="contain"
+              />
+            </q-btn>
+          </div>
+        </div>
+      </q-expansion-item>
+    </div>
+  </div>
 </template>
 
 <script lang="ts">
+import { stores, getStoresByCategory, getOtherStores, goToMap } from './ts/ZSStore';
+
 export default {
   data() {
     return {
-      stores: [
-        {
-          name: '家廚小館',
-          address: '台北市中山區長安東路二段129巷5號',
-          phone: '(02)2507-7845',
-          category: '熱食',
-          discount: 'unknown',
-          mapUrl:
-            'https://www.google.com/maps/search/?api=1&query=家廚小館+台北市中山區長安東路二段129巷5號',
-        },
-        {
-          name: '小絨越式河粉',
-          address: '台北市中山區長安東路二段129巷4號',
-          phone: '0939-551001',
-          category: '熱食',
-          discount: 'unknown',
-          mapUrl:
-            'https://www.google.com/maps/search/?api=1&query=小絨越式河粉+台北市中山區長安東路二段129巷4號',
-        },
-        {
-          name: '港都手工麵館',
-          address: '台北市中山區長安東路二段129巷2號',
-          phone: '(02)2504-5405',
-          category: '熱食',
-          discount: 'unknown',
-          mapUrl:
-            'https://www.google.com/maps/search/?api=1&query=港都手工麵館+台北市中山區長安東路二段129巷2號',
-        },
-        {
-          name: '蛋室BUT',
-          address: '台北市中山區長安東路二段129巷7號',
-          phone: '0976-423794',
-          category: '早午餐',
-          discount: 'unknown',
-          mapUrl:
-            'https://www.google.com/maps/search/?api=1&query=蛋室BUT+台北市中山區長安東路二段129巷7號',
-        },
-        {
-          name: '呷尚寶中西式速食 - 建安店',
-          address: '台北市中山區建國北路一段62號',
-          phone: 'unknown',
-          category: '早午餐',
-          discount: 'unknown',
-          mapUrl:
-            'https://www.google.com/maps/search/?api=1&query=呷尚寶中西式速食+建安店+台北市中山區建國北路一段62號',
-        },
-        {
-          name: '4+ Break Breakfast',
-          address: '台北市中山區松江路53號',
-          phone: 'unknown',
-          category: '早午餐',
-          discount: 'unknown',
-          mapUrl:
-            'https://www.google.com/maps/search/?api=1&query=4%2B+Break+Breakfast+台北市中山區松江路53號',
-        },
-        {
-          name: 'MEXIGO墨西哥健康餐盒',
-          address: '台北市中山區長安東路二段129巷13號',
-          phone: '(02)2507-6608',
-          category: '早午餐',
-          discount: 'unknown',
-          mapUrl:
-            'https://www.google.com/maps/search/?api=1&query=MEXIGO墨西哥健康餐盒+台北市中山區長安東路二段129巷13號',
-        },
-        {
-          name: '早吧 Morning Bar 伊通店',
-          address: '台北市中山區伊通階41號1樓',
-          phone: '(02)2515-2737',
-          category: '早午餐',
-          discount: 'unknown',
-          mapUrl:
-            'https://www.google.com/maps/search/?api=1&query=早吧+Morning+Bar+伊通店+台北市中山區伊通階41號1樓',
-        },
-        {
-          name: 'SUBWAY長安松江店',
-          address: '台北市中山區長安東路二段92號',
-          phone: '(02)2517-7667',
-          category: '速食',
-          discount: 'unknown',
-          mapUrl:
-            'https://www.google.com/maps/search/?api=1&query=SUBWAY長安松江店+台北市中山區長安東路二段92號',
-        },
-        {
-          name: '得正#台北遼寧計劃',
-          address: '台北市中山區遼寧街31號',
-          phone: '(02)2711-1270',
-          category: '飲料',
-          discount: 'unknown',
-          mapUrl: 'https://www.google.com/maps/search/?api=1&query=得正+台北市中山區遼寧街31號',
-        },
-        {
-          name: '麻古茶坊 松江南京店',
-          address: '台北市中山區南京東路二段192號',
-          phone: '(02)2517-6690',
-          category: '飲料',
-          discount: 'unknown',
-          mapUrl:
-            'https://www.google.com/maps/search/?api=1&query=麻古茶坊+松江南京店+台北市中山區南京東路二段192號',
-        },
-        {
-          name: '珍煮丹 台北遼寧店',
-          address: '台北市中山區遼寧街27號1樓',
-          phone: '(02)2776-0727',
-          category: '飲料',
-          discount: 'unknown',
-          mapUrl:
-            'https://www.google.com/maps/search/?api=1&query=珍煮丹+台北遼寧店+台北市中山區遼寧街27號',
-        },
-        {
-          name: '凱樂烘焙 Carol Bakery 長安總店',
-          address: '台北市中山區長安東路二段131-4號',
-          phone: 'unknown',
-          category: '甜點',
-          discount: 'unknown',
-          mapUrl:
-            'https://www.google.com/maps/search/?api=1&query=凱樂烘焙+Carol+Bakery+長安總店+台北市中山區長安東路二段131-4號',
-        },
-        {
-          name: '啡卡咖啡',
-          address: '台北市中山區伊通街33號',
-          phone: 'unknown',
-          category: '點心',
-          discount: 'unknown',
-          mapUrl: 'https://www.google.com/maps/search/?api=1&query=啡卡咖啡+台北市中山區伊通街33號',
-        },
-        {
-          name: 'Louisa Coffee 路易莎咖啡(南京建國店)',
-          address: '台北市中山區南京東路二段206號',
-          phone: 'unknown',
-          category: '點心',
-          discount: 'unknown',
-          mapUrl:
-            'https://www.google.com/maps/search/?api=1&query=Louisa+Coffee+路易莎咖啡+南京建國店+台北市中山區南京東路二段206號',
-        },
-        {
-          name: '93巷人文空間',
-          address: '台北市中山區松江路93巷2號',
-          phone: '(02)2509-5085',
-          category: '其他',
-          discount: 'unknown',
-          mapUrl:
-            'https://www.google.com/maps/search/?api=1&query=93巷人文空間+台北市中山區松江路93巷2號',
-        },
-      ],
+      stores,
     };
   },
   methods: {
-    goToMap(url: string) {
-      window.open(url, '_blank');
-    },
+    getStoresByCategory,
+    getOtherStores,
+    goToMap,
   },
 };
 </script>
-
-<style scoped></style>
