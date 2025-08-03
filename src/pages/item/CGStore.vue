@@ -20,6 +20,11 @@
             <div class="q-mb-xs"><strong>地址</strong>：{{ store.address }}</div>
             <div class="q-mb-xs"><strong>電話</strong>：{{ store.phone }}</div>
             <div><strong>優惠內容</strong>：{{ store.discount }}</div>
+            <div>
+              <strong>是否可與其他優惠並用</strong>：
+              <span v-if="store.cocurrent == true">是</span>
+              <span v-if="store.cocurrent == false">否</span>
+            </div>
           </div>
           <div class="col-4 flex justify-end">
             <q-btn
@@ -62,6 +67,11 @@
             <div class="q-mb-xs"><strong>地址</strong>：{{ store.address }}</div>
             <div class="q-mb-xs"><strong>電話</strong>：{{ store.phone }}</div>
             <div><strong>優惠內容</strong>：{{ store.discount }}</div>
+            <div>
+              <strong>是否可與其他優惠並用</strong>：
+              <span v-if="store.cocurrent == true">是</span>
+              <span v-if="store.cocurrent == false">否</span>
+            </div>
           </div>
           <div class="col-4 flex justify-end">
             <q-btn
@@ -104,6 +114,11 @@
             <div class="q-mb-xs"><strong>地址</strong>：{{ store.address }}</div>
             <div class="q-mb-xs"><strong>電話</strong>：{{ store.phone }}</div>
             <div><strong>優惠內容</strong>：{{ store.discount }}</div>
+            <div>
+              <strong>是否可與其他優惠並用</strong>：
+              <span v-if="store.cocurrent == true">是</span>
+              <span v-if="store.cocurrent == false">否</span>
+            </div>
           </div>
           <div class="col-4 flex justify-end">
             <q-btn
@@ -146,6 +161,11 @@
             <div class="q-mb-xs"><strong>地址</strong>：{{ store.address }}</div>
             <div class="q-mb-xs"><strong>電話</strong>：{{ store.phone }}</div>
             <div><strong>優惠內容</strong>：{{ store.discount }}</div>
+            <div>
+              <strong>是否可與其他優惠並用</strong>：
+              <span v-if="store.cocurrent == true">是</span>
+              <span v-if="store.cocurrent == false">否</span>
+            </div>
           </div>
           <div class="col-4 flex justify-end">
             <q-btn
@@ -188,6 +208,11 @@
             <div class="q-mb-xs"><strong>地址</strong>：{{ store.address }}</div>
             <div class="q-mb-xs"><strong>電話</strong>：{{ store.phone }}</div>
             <div><strong>優惠內容</strong>：{{ store.discount }}</div>
+            <div>
+              <strong>是否可與其他優惠並用</strong>：
+              <span v-if="store.cocurrent == true">是</span>
+              <span v-if="store.cocurrent == false">否</span>
+            </div>
           </div>
           <div class="col-4 flex justify-end">
             <q-btn
@@ -230,6 +255,11 @@
             <div class="q-mb-xs"><strong>地址</strong>：{{ store.address }}</div>
             <div class="q-mb-xs"><strong>電話</strong>：{{ store.phone }}</div>
             <div><strong>優惠內容</strong>：{{ store.discount }}</div>
+            <div>
+              <strong>是否可與其他優惠並用</strong>：
+              <span v-if="store.cocurrent == true">是</span>
+              <span v-if="store.cocurrent == false">否</span>
+            </div>
           </div>
           <div class="col-4 flex justify-end">
             <q-btn
@@ -272,6 +302,11 @@
             <div class="q-mb-xs"><strong>地址</strong>：{{ store.address }}</div>
             <div class="q-mb-xs"><strong>電話</strong>：{{ store.phone }}</div>
             <div><strong>優惠內容</strong>：{{ store.discount }}</div>
+            <div>
+              <strong>是否可與其他優惠並用</strong>：
+              <span v-if="store.cocurrent == true">是</span>
+              <span v-if="store.cocurrent == false">否</span>
+            </div>
           </div>
           <div class="col-4 flex justify-end">
             <q-btn
@@ -298,7 +333,6 @@
 
 <script lang="ts">
 import { stores, getStoresByCategory, getOtherStores, goToMap } from './ts/CGStore';
-
 export default {
   data() {
     return {

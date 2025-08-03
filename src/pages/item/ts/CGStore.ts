@@ -5,6 +5,7 @@ export interface Store {
   category: string;
   discount: string;
   mapUrl: string;
+  cocurrent: boolean;
 }
 
 export const stores: Store[] = [
@@ -16,6 +17,7 @@ export const stores: Store[] = [
     discount: 'unknown',
     mapUrl:
       'https://www.google.com/maps/search/?api=1&query=GET+POWER+給力盒子-北商店+台北市中正區青島東路33-2號',
+    cocurrent: true,
   },
   {
     name: '莫名福州乾拌麵',
@@ -25,6 +27,7 @@ export const stores: Store[] = [
     discount: 'unknown',
     mapUrl:
       'https://www.google.com/maps/search/?api=1&query=莫名福州乾拌麵+台北市中正區青島東路33-3號',
+    cocurrent: true,
   },
   {
     name: '八方雲集善導寺店',
@@ -34,6 +37,7 @@ export const stores: Store[] = [
     discount: 'unknown',
     mapUrl:
       'https://www.google.com/maps/search/?api=1&query=八方雲集善導寺店+台北市中正區忠孝東路一段11號',
+    cocurrent: true,
   },
   {
     name: 'すき家林森南路',
@@ -43,6 +47,7 @@ export const stores: Store[] = [
     discount: 'unknown',
     mapUrl:
       'https://www.google.com/maps/search/?api=1&query=すき家林森南路+台北市中正區林森南路12號',
+    cocurrent: true,
   },
   {
     name: '何家大碗公涼麵',
@@ -52,6 +57,7 @@ export const stores: Store[] = [
     discount: 'unknown',
     mapUrl:
       'https://www.google.com/maps/search/?api=1&query=何家大碗公涼麵+台北市中正區青島東路21之9號',
+    cocurrent: true,
   },
   {
     name: '饌玉豐 青島店',
@@ -61,6 +67,7 @@ export const stores: Store[] = [
     discount: 'unknown',
     mapUrl:
       'https://www.google.com/maps/search/?api=1&query=饌玉豐+青島店+台北市中正區青島東路7-1號',
+    cocurrent: true,
   },
   {
     name: '順口牛肉麵',
@@ -69,6 +76,7 @@ export const stores: Store[] = [
     category: '熱食',
     discount: 'unknown',
     mapUrl: 'https://www.google.com/maps/search/?api=1&query=順口牛肉麵+台北市中正區濟南路一段9號',
+    cocurrent: true,
   },
   {
     name: '麒玲 義大利麵店',
@@ -78,6 +86,7 @@ export const stores: Store[] = [
     discount: 'unknown',
     mapUrl:
       'https://www.google.com/maps/search/?api=1&query=麒玲+義大利麵店+台北市中正區忠孝東路一段82號',
+    cocurrent: true,
   },
   {
     name: 'CoCo都可 青島店',
@@ -87,6 +96,7 @@ export const stores: Store[] = [
     discount: 'unknown',
     mapUrl:
       'https://www.google.com/maps/search/?api=1&query=CoCo都可+青島店+台北市中正區青島東路21之10號',
+    cocurrent: true,
   },
   {
     name: '舞動陽光-成功高中運動中心',
@@ -96,6 +106,7 @@ export const stores: Store[] = [
     discount: 'unknown',
     mapUrl:
       'https://www.google.com/maps/search/?api=1&query=舞動陽光-成功高中運動中心+台北市中正區濟南路一段71號',
+    cocurrent: true,
   },
   {
     name: '左轉有書',
@@ -104,6 +115,7 @@ export const stores: Store[] = [
     category: '其他',
     discount: 'unknown',
     mapUrl: 'https://www.google.com/maps/search/?api=1&query=左轉有書+台北市中正區鎮江街3-1號',
+    cocurrent: true,
   },
 ];
 

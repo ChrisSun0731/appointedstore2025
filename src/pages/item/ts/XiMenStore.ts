@@ -5,6 +5,7 @@ export interface Store {
   category: string;
   discount: string;
   mapUrl: string;
+  cocurrent: boolean;
 }
 
 export const stores: Store[] = [
@@ -16,6 +17,7 @@ export const stores: Store[] = [
     discount: 'unknown',
     mapUrl:
       'https://www.google.com/maps/search/?api=1&query=道樂商店拉麵+台北市萬華區成都路27巷12號',
+    cocurrent: true,
   },
   {
     name: '福勝亭（西門店）',
@@ -24,6 +26,7 @@ export const stores: Store[] = [
     category: '熱食',
     discount: 'unknown',
     mapUrl: 'https://www.google.com/maps/search/?api=1&query=福勝亭+台北市萬華區峨嵋街40號',
+    cocurrent: true,
   },
   {
     name: '樂麵屋 西門店',
@@ -32,6 +35,7 @@ export const stores: Store[] = [
     category: '熱食',
     discount: 'unknown',
     mapUrl: 'https://www.google.com/maps/search/?api=1&query=樂麵屋+台北市萬華區昆明街25號',
+    cocurrent: true,
   },
   {
     name: '鴨肉扁土鵝專賣店',
@@ -41,6 +45,7 @@ export const stores: Store[] = [
     discount: 'unknown',
     mapUrl:
       'https://www.google.com/maps/search/?api=1&query=鴨肉扁土鵝專賣店+台北市萬華區中華路一段98之2號',
+    cocurrent: true,
   },
   {
     name: '一支麥冰品店',
@@ -50,6 +55,7 @@ export const stores: Store[] = [
     discount: 'unknown',
     mapUrl:
       'https://www.google.com/maps/search/?api=1&query=一支麥冰品店+台北市萬華區中華路一段114巷12號',
+    cocurrent: true,
   },
   {
     name: 'COMEBUYTEA_西門生活店',
@@ -58,6 +64,7 @@ export const stores: Store[] = [
     category: '飲料',
     discount: 'unknown',
     mapUrl: 'https://www.google.com/maps/search/?api=1&query=COMEBUYTEA+台北市萬華區峨眉街52號',
+    cocurrent: true,
   },
   {
     name: 'Louisa Coffee 路易莎咖啡(昆明門市)',
@@ -66,6 +73,7 @@ export const stores: Store[] = [
     category: '飲料',
     discount: 'unknown',
     mapUrl: 'https://www.google.com/maps/search/?api=1&query=路易莎咖啡+台北市萬華區昆明街86號',
+    cocurrent: true,
   },
   {
     name: '海派服飾設計',
@@ -75,6 +83,7 @@ export const stores: Store[] = [
     discount: 'unknown',
     mapUrl:
       'https://www.google.com/maps/search/?api=1&query=海派服飾設計+台北市萬華區中華路一段144-1號',
+    cocurrent: true,
   },
   {
     name: '久大文具連鎖 西門町店',
@@ -83,6 +92,7 @@ export const stores: Store[] = [
     category: '其他',
     discount: 'unknown',
     mapUrl: 'https://www.google.com/maps/search/?api=1&query=久大文具+台北市萬華區中華路一段152號',
+    cocurrent: true,
   },
 ];
 
