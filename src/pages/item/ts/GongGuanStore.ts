@@ -5,7 +5,7 @@ export interface Store {
   category: string;
   discount: string;
   mapUrl: string;
-  cocurrent: boolean;
+  concurrent: boolean;
 }
 
 export const stores: Store[] = [
@@ -17,7 +17,7 @@ export const stores: Store[] = [
     discount: 'unknown',
     mapUrl:
       'https://www.google.com/maps/search/?api=1&query=得正+台北公館計劃+台北市中正區羅斯福路三段316巷10-2號',
-    cocurrent: true,
+    concurrent: true,
   },
   {
     name: '可不可熟成紅茶 台北公館店',
@@ -27,7 +27,7 @@ export const stores: Store[] = [
     discount: 'unknown',
     mapUrl:
       'https://www.google.com/maps/search/?api=1&query=可不可熟成紅茶+台北公館店+台北市中正區汀州路三段174號',
-    cocurrent: true,
+    concurrent: true,
   },
   {
     name: '迷客夏Milksha 臺北公館',
@@ -37,7 +37,7 @@ export const stores: Store[] = [
     discount: 'unknown',
     mapUrl:
       'https://www.google.com/maps/search/?api=1&query=迷客夏Milksha+臺北公館+台北市中正區羅斯福路三段316巷10之2號1樓',
-    cocurrent: true,
+    concurrent: true,
   },
 ];
 

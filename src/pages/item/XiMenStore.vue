@@ -22,8 +22,8 @@
             <div><strong>優惠內容</strong>：{{ store.discount }}</div>
             <div>
               <strong>是否可與其他優惠並用</strong>：
-              <span v-if="store.cocurrent == true">是</span>
-              <span v-if="store.cocurrent == false">否</span>
+              <span v-if="store.concurrent == true">是</span>
+              <span v-if="store.concurrent == false">否</span>
             </div>
           </div>
           <div class="col-4 flex justify-end">
@@ -69,8 +69,8 @@
             <div><strong>優惠內容</strong>：{{ store.discount }}</div>
             <div>
               <strong>是否可與其他優惠並用</strong>：
-              <span v-if="store.cocurrent == true">是</span>
-              <span v-if="store.cocurrent == false">否</span>
+              <span v-if="store.concurrent == true">是</span>
+              <span v-if="store.concurrent == false">否</span>
             </div>
           </div>
           <div class="col-4 flex justify-end">
@@ -116,8 +116,8 @@
             <div><strong>優惠內容</strong>：{{ store.discount }}</div>
             <div>
               <strong>是否可與其他優惠並用</strong>：
-              <span v-if="store.cocurrent == true">是</span>
-              <span v-if="store.cocurrent == false">否</span>
+              <span v-if="store.concurrent == true">是</span>
+              <span v-if="store.concurrent == false">否</span>
             </div>
           </div>
           <div class="col-4 flex justify-end">
@@ -163,8 +163,8 @@
             <div><strong>優惠內容</strong>：{{ store.discount }}</div>
             <div>
               <strong>是否可與其他優惠並用</strong>：
-              <span v-if="store.cocurrent == true">是</span>
-              <span v-if="store.cocurrent == false">否</span>
+              <span v-if="store.concurrent == true">是</span>
+              <span v-if="store.concurrent == false">否</span>
             </div>
           </div>
           <div class="col-4 flex justify-end">
@@ -210,8 +210,8 @@
             <div><strong>優惠內容</strong>：{{ store.discount }}</div>
             <div>
               <strong>是否可與其他優惠並用</strong>：
-              <span v-if="store.cocurrent == true">是</span>
-              <span v-if="store.cocurrent == false">否</span>
+              <span v-if="store.concurrent == true">是</span>
+              <span v-if="store.concurrent == false">否</span>
             </div>
           </div>
           <div class="col-4 flex justify-end">
@@ -257,8 +257,8 @@
             <div><strong>優惠內容</strong>：{{ store.discount }}</div>
             <div>
               <strong>是否可與其他優惠並用</strong>：
-              <span v-if="store.cocurrent == true">是</span>
-              <span v-if="store.cocurrent == false">否</span>
+              <span v-if="store.concurrent == true">是</span>
+              <span v-if="store.concurrent == false">否</span>
             </div>
           </div>
           <div class="col-4 flex justify-end">
@@ -304,8 +304,8 @@
             <div><strong>優惠內容</strong>：{{ store.discount }}</div>
             <div>
               <strong>是否可與其他優惠並用</strong>：
-              <span v-if="store.cocurrent == true">是</span>
-              <span v-if="store.cocurrent == false">否</span>
+              <span v-if="store.concurrent == true">是</span>
+              <span v-if="store.concurrent == false">否</span>
             </div>
           </div>
           <div class="col-4 flex justify-end">

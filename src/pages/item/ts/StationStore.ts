@@ -5,7 +5,7 @@ export interface Store {
   category: string;
   discount: string;
   mapUrl: string;
-  cocurrent: boolean;
+  concurrent: boolean;
 }
 
 export const stores: Store[] = [
@@ -17,7 +17,7 @@ export const stores: Store[] = [
     discount: 'unknown',
     mapUrl:
       'https://www.google.com/maps/search/?api=1&query=十三川日本拉麵定食+台北市中正區公園路18號',
-    cocurrent: true,
+    concurrent: true,
   },
   {
     name: '大立溫州大餛飩',
@@ -27,7 +27,7 @@ export const stores: Store[] = [
     discount: 'unknown',
     mapUrl:
       'https://www.google.com/maps/search/?api=1&query=大立溫州大餛飩+台北市中正區公園路20巷2號',
-    cocurrent: true,
+    concurrent: true,
   },
   {
     name: 'best義pasta食堂',
@@ -36,7 +36,7 @@ export const stores: Store[] = [
     category: '熱食',
     discount: 'unknown',
     mapUrl: 'https://www.google.com/maps/search/?api=1&query=best義pasta食堂+台北市中正區南陽街3號',
-    cocurrent: true,
+    concurrent: true,
   },
   {
     name: '玖仰 信陽門市',
@@ -45,7 +45,7 @@ export const stores: Store[] = [
     category: '熱食',
     discount: 'unknown',
     mapUrl: 'https://www.google.com/maps/search/?api=1&query=玖仰+台北市中正區信陽街6-2號',
-    cocurrent: true,
+    concurrent: true,
   },
   {
     name: '砸鍋賣鐵 中正',
@@ -54,7 +54,7 @@ export const stores: Store[] = [
     category: '熱食',
     discount: 'unknown',
     mapUrl: 'https://www.google.com/maps/search/?api=1&query=砸鍋賣鐵+台北市中正區漢口街一段35號',
-    cocurrent: true,
+    concurrent: true,
   },
   {
     name: '吉豚屋北車店',
@@ -63,7 +63,7 @@ export const stores: Store[] = [
     category: '熱食',
     discount: 'unknown',
     mapUrl: 'https://www.google.com/maps/search/?api=1&query=吉豚屋+台北市中正區忠孝西路一段36號',
-    cocurrent: true,
+    concurrent: true,
   },
   {
     name: '雲客來刀削麵館',
@@ -73,7 +73,7 @@ export const stores: Store[] = [
     discount: 'unknown',
     mapUrl:
       'https://www.google.com/maps/search/?api=1&query=雲客來刀削麵館+台北市中正區忠孝西路一段100號',
-    cocurrent: true,
+    concurrent: true,
   },
   {
     name: '洋庭坊義大利麵（重慶店）',
@@ -83,7 +83,7 @@ export const stores: Store[] = [
     discount: 'unknown',
     mapUrl:
       'https://www.google.com/maps/search/?api=1&query=洋庭坊義大利麵+台北市中正區重慶南路一段63號',
-    cocurrent: true,
+    concurrent: true,
   },
   {
     name: '丸龜製麵 台北地下街店',
@@ -92,7 +92,7 @@ export const stores: Store[] = [
     category: '熱食',
     discount: 'unknown',
     mapUrl: 'https://www.google.com/maps/search/?api=1&query=丸龜製麵+台北地下街+K區47號',
-    cocurrent: true,
+    concurrent: true,
   },
   {
     name: '得正#北車信陽計劃',
@@ -101,7 +101,7 @@ export const stores: Store[] = [
     category: '飲料',
     discount: 'unknown',
     mapUrl: 'https://www.google.com/maps/search/?api=1&query=得正+台北市中正區信陽街13之1號',
-    cocurrent: true,
+    concurrent: true,
   },
   {
     name: '可不可熟成紅茶-台北站前店',
@@ -110,7 +110,7 @@ export const stores: Store[] = [
     category: '飲料',
     discount: 'unknown',
     mapUrl: 'https://www.google.com/maps/search/?api=1&query=可不可熟成紅茶+台北市中正區南陽街34號',
-    cocurrent: true,
+    concurrent: true,
   },
   {
     name: 'COMEBUY_台北南陽店',
@@ -119,7 +119,7 @@ export const stores: Store[] = [
     category: '飲料',
     discount: 'unknown',
     mapUrl: 'https://www.google.com/maps/search/?api=1&query=COMEBUY+台北市中正區許昌街26-2號',
-    cocurrent: true,
+    concurrent: true,
   },
   {
     name: '咕咕鬆餅屋',
@@ -129,7 +129,7 @@ export const stores: Store[] = [
     discount: 'unknown',
     mapUrl:
       'https://www.google.com/maps/search/?api=1&query=咕咕鬆餅屋+台北市中正區開封街一段2-52號',
-    cocurrent: true,
+    concurrent: true,
   },
   {
     name: '小山之丘麵包台北站前店',
@@ -138,7 +138,7 @@ export const stores: Store[] = [
     category: '點心',
     discount: 'unknown',
     mapUrl: 'https://www.google.com/maps/search/?api=1&query=小山之丘麵包+台北市中正區許昌街8號',
-    cocurrent: true,
+    concurrent: true,
   },
   {
     name: '三民書局 (重南店)',
@@ -147,7 +147,7 @@ export const stores: Store[] = [
     category: '其他',
     discount: 'unknown',
     mapUrl: 'https://www.google.com/maps/search/?api=1&query=三民書局+台北市中正區重慶南路一段61號',
-    cocurrent: true,
+    concurrent: true,
   },
   {
     name: 'K書會館',
@@ -156,7 +156,7 @@ export const stores: Store[] = [
     category: '其他',
     discount: 'unknown',
     mapUrl: 'https://www.google.com/maps/search/?api=1&query=K書會館+台北市中正區南陽街20號',
-    cocurrent: true,
+    concurrent: true,
   },
   {
     name: '卯時設計有限公司',
@@ -165,7 +165,7 @@ export const stores: Store[] = [
     category: '服飾',
     discount: 'unknown',
     mapUrl: 'https://www.google.com/maps/search/?api=1&query=卯時設計+台北市大同區太原路8巷3號',
-    cocurrent: true,
+    concurrent: true,
   },
   {
     name: '服麗社團禮服',
@@ -174,7 +174,7 @@ export const stores: Store[] = [
     category: '服飾',
     discount: 'unknown',
     mapUrl: 'https://www.google.com/maps/search/?api=1&query=服麗社團禮服+台北市中正區懷寧街17號',
-    cocurrent: true,
+    concurrent: true,
   },
   {
     name: '服麗社團禮服',
@@ -183,7 +183,7 @@ export const stores: Store[] = [
     category: '服飾',
     discount: 'unknown',
     mapUrl: 'https://www.google.com/maps/search/?api=1&query=服麗社團禮服+台北市中正區懷寧街17號',
-    cocurrent: true,
+    concurrent: true,
   },
   {
     name: '五大唱片台北站前店',
@@ -192,7 +192,7 @@ export const stores: Store[] = [
     category: '音樂',
     discount: 'unknown',
     mapUrl: 'https://www.google.com/maps/search/?api=1&query=五大唱片+台北市中正區南陽街1號',
-    cocurrent: true,
+    concurrent: true,
   },
   {
     name: '北車0.3熱門音樂中心',
@@ -202,7 +202,7 @@ export const stores: Store[] = [
     discount: 'unknown',
     mapUrl:
       'https://www.google.com/maps/search/?api=1&query=北車0.3熱門音樂中心+台北市中正區忠孝西路一段7號',
-    cocurrent: true,
+    concurrent: true,
   },
 ];
 

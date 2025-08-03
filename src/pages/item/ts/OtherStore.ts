@@ -5,7 +5,7 @@ export interface Store {
   category: string;
   discount: string;
   mapUrl: string;
-  cocurrent: boolean;
+  concurrent: boolean;
 }
 
 export const stores: Store[] = [
@@ -17,7 +17,7 @@ export const stores: Store[] = [
     discount: 'unknown',
     mapUrl:
       'https://www.google.com/maps/search/?api=1&query=らあめん花月嵐+信義威秀店+台北市信義區松壽路20號2樓',
-    cocurrent: true,
+    concurrent: true,
   },
   {
     name: '演色—捷運古亭',
@@ -27,7 +27,7 @@ export const stores: Store[] = [
     discount: 'unknown',
     mapUrl:
       'https://www.google.com/maps/search/?api=1&query=演色—捷運古亭+台北市中正區羅斯福路二段50號一樓',
-    cocurrent: true,
+    concurrent: true,
   },
   {
     name: '宥朋團體服紀念品',
@@ -37,7 +37,7 @@ export const stores: Store[] = [
     discount: 'unknown',
     mapUrl:
       'https://www.google.com/maps/search/?api=1&query=宥朋團體服紀念品+新北市三重區永福街216號1樓',
-    cocurrent: true,
+    concurrent: true,
   },
   {
     name: '采豐數位股份有限公司',
@@ -47,7 +47,7 @@ export const stores: Store[] = [
     discount: 'unknown',
     mapUrl:
       'https://www.google.com/maps/search/?api=1&query=采豐數位股份有限公司+新北市中和區宜安路112號7樓',
-    cocurrent: true,
+    concurrent: true,
   },
 ];
 
