@@ -6,6 +6,7 @@ export interface Store {
   discount: string;
   mapUrl: string;
   concurrent: boolean;
+  rule: string;
 }
 
 export const stores: Store[] = [
@@ -18,6 +19,7 @@ export const stores: Store[] = [
     mapUrl:
       'https://www.google.com/maps/search/?api=1&query=家廚小館+台北市中山區長安東路二段129巷5號',
     concurrent: true,
+    rule: '',
   },
   {
     name: '小絨越式河粉',
@@ -28,6 +30,7 @@ export const stores: Store[] = [
     mapUrl:
       'https://www.google.com/maps/search/?api=1&query=小絨越式河粉+台北市中山區長安東路二段129巷4號',
     concurrent: true,
+    rule: '',
   },
   {
     name: '港都手工麵館',
@@ -38,6 +41,7 @@ export const stores: Store[] = [
     mapUrl:
       'https://www.google.com/maps/search/?api=1&query=港都手工麵館+台北市中山區長安東路二段129巷2號',
     concurrent: true,
+    rule: '',
   },
   {
     name: '蛋室BUT',
@@ -48,6 +52,7 @@ export const stores: Store[] = [
     mapUrl:
       'https://www.google.com/maps/search/?api=1&query=蛋室BUT+台北市中山區長安東路二段129巷7號',
     concurrent: true,
+    rule: '',
   },
   {
     name: '呷尚寶中西式速食 - 建安店',
@@ -58,6 +63,7 @@ export const stores: Store[] = [
     mapUrl:
       'https://www.google.com/maps/search/?api=1&query=呷尚寶中西式速食+建安店+台北市中山區建國北路一段62號',
     concurrent: true,
+    rule: '',
   },
   {
     name: '4+ Break Breakfast',
@@ -68,6 +74,7 @@ export const stores: Store[] = [
     mapUrl:
       'https://www.google.com/maps/search/?api=1&query=4%2B+Break+Breakfast+台北市中山區松江路53號',
     concurrent: true,
+    rule: '',
   },
   {
     name: 'MEXIGO墨西哥健康餐盒',
@@ -78,6 +85,7 @@ export const stores: Store[] = [
     mapUrl:
       'https://www.google.com/maps/search/?api=1&query=MEXIGO墨西哥健康餐盒+台北市中山區長安東路二段129巷13號',
     concurrent: true,
+    rule: '',
   },
   {
     name: '早吧 Morning Bar 伊通店',
@@ -88,6 +96,7 @@ export const stores: Store[] = [
     mapUrl:
       'https://www.google.com/maps/search/?api=1&query=早吧+Morning+Bar+伊通店+台北市中山區伊通階41號1樓',
     concurrent: true,
+    rule: '',
   },
   {
     name: 'SUBWAY長安松江店',
@@ -98,6 +107,7 @@ export const stores: Store[] = [
     mapUrl:
       'https://www.google.com/maps/search/?api=1&query=SUBWAY長安松江店+台北市中山區長安東路二段92號',
     concurrent: true,
+    rule: '',
   },
   {
     name: '得正#台北遼寧計劃',
@@ -107,6 +117,7 @@ export const stores: Store[] = [
     discount: 'unknown',
     mapUrl: 'https://www.google.com/maps/search/?api=1&query=得正+台北市中山區遼寧街31號',
     concurrent: true,
+    rule: '',
   },
   {
     name: '麻古茶坊 松江南京店',
@@ -117,6 +128,7 @@ export const stores: Store[] = [
     mapUrl:
       'https://www.google.com/maps/search/?api=1&query=麻古茶坊+松江南京店+台北市中山區南京東路二段192號',
     concurrent: true,
+    rule: '',
   },
   {
     name: '珍煮丹 台北遼寧店',
@@ -127,6 +139,7 @@ export const stores: Store[] = [
     mapUrl:
       'https://www.google.com/maps/search/?api=1&query=珍煮丹+台北遼寧店+台北市中山區遼寧街27號',
     concurrent: true,
+    rule: '',
   },
   {
     name: '凱樂烘焙 Carol Bakery 長安總店',
@@ -137,6 +150,7 @@ export const stores: Store[] = [
     mapUrl:
       'https://www.google.com/maps/search/?api=1&query=凱樂烘焙+Carol+Bakery+長安總店+台北市中山區長安東路二段131-4號',
     concurrent: true,
+    rule: '',
   },
   {
     name: '啡卡咖啡',
@@ -146,6 +160,7 @@ export const stores: Store[] = [
     discount: 'unknown',
     mapUrl: 'https://www.google.com/maps/search/?api=1&query=啡卡咖啡+台北市中山區伊通街33號',
     concurrent: true,
+    rule: '',
   },
   {
     name: 'Louisa Coffee 路易莎咖啡(南京建國店)',
@@ -156,6 +171,7 @@ export const stores: Store[] = [
     mapUrl:
       'https://www.google.com/maps/search/?api=1&query=Louisa+Coffee+路易莎咖啡+南京建國店+台北市中山區南京東路二段206號',
     concurrent: true,
+    rule: '',
   },
   {
     name: '93巷人文空間',
@@ -166,6 +182,7 @@ export const stores: Store[] = [
     mapUrl:
       'https://www.google.com/maps/search/?api=1&query=93巷人文空間+台北市中山區松江路93巷2號',
     concurrent: true,
+    rule: '',
   },
 ];
 

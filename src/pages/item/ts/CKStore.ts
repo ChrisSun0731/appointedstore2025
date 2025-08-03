@@ -6,6 +6,7 @@ export interface Store {
   discount: string;
   mapUrl: string;
   concurrent: boolean;
+  rule: string;
 }
 
 export const stores: Store[] = [
@@ -17,6 +18,7 @@ export const stores: Store[] = [
     discount: 'unknown',
     mapUrl: 'https://www.google.com/maps/search/?api=1&query=懿品小珍+台北市中正區寧波西街88之1號',
     concurrent: true,
+    rule: '',
   },
   {
     name: '八方雲集（中正南海店）',
@@ -26,6 +28,7 @@ export const stores: Store[] = [
     discount: 'unknown',
     mapUrl: 'https://www.google.com/maps/search/?api=1&query=八方雲集+台北市中正區南海路50號',
     concurrent: true,
+    rule: '',
   },
   {
     name: '昇客雞肉飯',
@@ -35,6 +38,7 @@ export const stores: Store[] = [
     discount: 'unknown',
     mapUrl: 'https://www.google.com/maps/search/?api=1&query=昇客雞肉+台北市中正區寧波西街88號',
     concurrent: true,
+    rule: '',
   },
   {
     name: '建中側門抓餅',
@@ -44,6 +48,7 @@ export const stores: Store[] = [
     discount: 'unknown',
     mapUrl: 'https://www.google.com/maps/search/?api=1&query=建中側門抓餅+台北市中正區泉州街9號',
     concurrent: true,
+    rule: '',
   },
   {
     name: '搭伙',
@@ -53,6 +58,7 @@ export const stores: Store[] = [
     discount: 'unknown',
     mapUrl: 'https://www.google.com/maps/search/?api=1&query=搭伙+台北市中正區泉州街4-1號',
     concurrent: true,
+    rule: '',
   },
   {
     name: '廣東小吃',
@@ -62,6 +68,7 @@ export const stores: Store[] = [
     discount: 'unknown',
     mapUrl: 'https://www.google.com/maps/search/?api=1&query=廣東小吃+台北市中正區泉州街9號',
     concurrent: true,
+    rule: '',
   },
   {
     name: '金仙快餐便當',
@@ -71,6 +78,7 @@ export const stores: Store[] = [
     discount: 'unknown',
     mapUrl: 'https://www.google.com/maps/search/?api=1&query=金仙快餐便當+台北市中正區寧波西街74號',
     concurrent: true,
+    rule: '',
   },
   {
     name: '養鍋 中正店',
@@ -80,6 +88,7 @@ export const stores: Store[] = [
     discount: 'unknown',
     mapUrl: 'https://www.google.com/maps/search/?api=1&query=養鍋+台北市中正區寧波西街81號',
     concurrent: true,
+    rule: '',
   },
   {
     name: '三商巧福 南昌門市',
@@ -89,6 +98,7 @@ export const stores: Store[] = [
     discount: 'unknown',
     mapUrl: 'https://www.google.com/maps/search/?api=1&query=三商巧福+台北市中正區南昌路一段46號',
     concurrent: true,
+    rule: '',
   },
   {
     name: '老建中麵店',
@@ -98,6 +108,7 @@ export const stores: Store[] = [
     discount: 'unknown',
     mapUrl: 'https://www.google.com/maps/search/?api=1&query=老建中麵店+台北市中正區泉州街39號',
     concurrent: true,
+    rule: '',
   },
   {
     name: '南海19(建豆)',
@@ -107,6 +118,7 @@ export const stores: Store[] = [
     discount: 'unknown',
     mapUrl: 'https://www.google.com/maps/search/?api=1&query=建豆+台北市中正區寧波西街124-2號',
     concurrent: true,
+    rule: '',
   },
   {
     name: '老熊牛肉麵',
@@ -116,6 +128,7 @@ export const stores: Store[] = [
     discount: 'unknown',
     mapUrl: 'https://www.google.com/maps/search/?api=1&query=老熊牛肉麵+台北市中正區南海路38-2號',
     concurrent: true,
+    rule: '',
   },
   {
     name: '吉仕達義麵房 南昌店',
@@ -126,6 +139,7 @@ export const stores: Store[] = [
     mapUrl:
       'https://www.google.com/maps/search/?api=1&query=吉仕達義麵房+台北市中正區南昌路一段50-2號',
     concurrent: true,
+    rule: '',
   },
   {
     name: '麵老大 中正區美食',
@@ -135,6 +149,7 @@ export const stores: Store[] = [
     discount: 'unknown',
     mapUrl: 'https://www.google.com/maps/search/?api=1&query=麵老大+台北市中正區寧波西街85-1號',
     concurrent: true,
+    rule: '',
   },
   {
     name: '福井麵疙瘩',
@@ -144,6 +159,7 @@ export const stores: Store[] = [
     discount: 'unknown',
     mapUrl: 'https://www.google.com/maps/search/?api=1&query=福井麵疙瘩+台北市中正區寧波西街87-3號',
     concurrent: true,
+    rule: '',
   },
   {
     name: '瑞哥雞肉飯 南海店',
@@ -153,6 +169,7 @@ export const stores: Store[] = [
     discount: 'unknown',
     mapUrl: 'https://www.google.com/maps/search/?api=1&query=瑞哥雞肉飯+台北市中正區南海路34號',
     concurrent: true,
+    rule: '',
   },
   {
     name: 'EBISU KITCHEN',
@@ -163,6 +180,7 @@ export const stores: Store[] = [
     mapUrl:
       'https://www.google.com/maps/search/?api=1&query=EBISU+KITCHEN+台北市中正區寧波西街77號',
     concurrent: true,
+    rule: '',
   },
   {
     name: '由紀',
@@ -172,6 +190,7 @@ export const stores: Store[] = [
     discount: 'unknown',
     mapUrl: 'https://www.google.com/maps/search/?api=1&query=由紀+台北市中正區寧波西街76號',
     concurrent: true,
+    rule: '',
   },
   {
     name: '雲南小廚',
@@ -181,6 +200,7 @@ export const stores: Store[] = [
     discount: 'unknown',
     mapUrl: 'https://www.google.com/maps/search/?api=1&query=雲南小廚+台北市中正區泉州街35號',
     concurrent: true,
+    rule: '',
   },
   {
     name: '建中黑砂糖刨冰',
@@ -190,6 +210,7 @@ export const stores: Store[] = [
     discount: 'unknown',
     mapUrl: 'https://www.google.com/maps/search/?api=1&query=建中黑砂糖刨冰+台北市中正區泉州街35號',
     concurrent: true,
+    rule: '',
   },
   {
     name: '星巴克 南海門市',
@@ -199,6 +220,7 @@ export const stores: Store[] = [
     discount: 'unknown',
     mapUrl: 'https://www.google.com/maps/search/?api=1&query=星巴克+台北市中正區南海路20號',
     concurrent: true,
+    rule: '',
   },
   {
     name: 'CoCo都可 南昌店',
@@ -208,6 +230,7 @@ export const stores: Store[] = [
     discount: 'unknown',
     mapUrl: 'https://www.google.com/maps/search/?api=1&query=CoCo都可+台北市中正區寧波西街83-2號',
     concurrent: true,
+    rule: '',
   },
   {
     name: 'QBurger 中正寧波店',
@@ -217,6 +240,7 @@ export const stores: Store[] = [
     discount: 'unknown',
     mapUrl: 'https://www.google.com/maps/search/?api=1&query=QBurger+台北市中正區寧波西街100號',
     concurrent: true,
+    rule: '',
   },
   {
     name: '十平方圖書文具館—南海店',
@@ -227,6 +251,7 @@ export const stores: Store[] = [
     mapUrl:
       'https://www.google.com/maps/search/?api=1&query=十平方圖書文具館+台北市中正區南海路48號',
     concurrent: true,
+    rule: '',
   },
   {
     name: '鼎紘影印有限公司',
@@ -236,6 +261,7 @@ export const stores: Store[] = [
     discount: 'unknown',
     mapUrl: 'https://www.google.com/maps/search/?api=1&query=鼎紘影印+台北市中正區寧波西街83號',
     concurrent: true,
+    rule: '',
   },
   {
     name: '動翅音樂',
@@ -245,6 +271,7 @@ export const stores: Store[] = [
     discount: 'unknown',
     mapUrl: 'https://www.google.com/maps/search/?api=1&query=動翅音樂+台北市中正區金華街19-1號',
     concurrent: true,
+    rule: '',
   },
 ];
 

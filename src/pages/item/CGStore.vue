@@ -25,6 +25,10 @@
               <span v-if="store.concurrent == true">是</span>
               <span v-if="store.concurrent == false">否</span>
             </div>
+            <div>
+              <span v-if="store.rule == ''"></span>
+              <span v-else><strong>其他條款</strong>：{{ store.rule }}</span>
+            </div>
           </div>
           <div class="col-4 flex justify-end">
             <q-btn
@@ -71,6 +75,10 @@
               <strong>是否可與其他優惠並用</strong>：
               <span v-if="store.concurrent == true">是</span>
               <span v-if="store.concurrent == false">否</span>
+            </div>
+            <div>
+              <span v-if="store.rule == ''"></span>
+              <span v-else><strong>其他條款</strong>：{{ store.rule }}</span>
             </div>
           </div>
           <div class="col-4 flex justify-end">
@@ -119,6 +127,10 @@
               <span v-if="store.concurrent == true">是</span>
               <span v-if="store.concurrent == false">否</span>
             </div>
+            <div>
+              <span v-if="store.rule == ''"></span>
+              <span v-else><strong>其他條款</strong>：{{ store.rule }}</span>
+            </div>
           </div>
           <div class="col-4 flex justify-end">
             <q-btn
@@ -165,6 +177,10 @@
               <strong>是否可與其他優惠並用</strong>：
               <span v-if="store.concurrent == true">是</span>
               <span v-if="store.concurrent == false">否</span>
+            </div>
+            <div>
+              <span v-if="store.rule == ''"></span>
+              <span v-else><strong>其他條款</strong>：{{ store.rule }}</span>
             </div>
           </div>
           <div class="col-4 flex justify-end">
@@ -213,6 +229,10 @@
               <span v-if="store.concurrent == true">是</span>
               <span v-if="store.concurrent == false">否</span>
             </div>
+            <div>
+              <span v-if="store.rule == ''"></span>
+              <span v-else><strong>其他條款</strong>：{{ store.rule }}</span>
+            </div>
           </div>
           <div class="col-4 flex justify-end">
             <q-btn
@@ -260,6 +280,10 @@
               <span v-if="store.concurrent == true">是</span>
               <span v-if="store.concurrent == false">否</span>
             </div>
+            <div>
+              <span v-if="store.rule == ''"></span>
+              <span v-else><strong>其他條款</strong>：{{ store.rule }}</span>
+            </div>
           </div>
           <div class="col-4 flex justify-end">
             <q-btn
@@ -306,6 +330,10 @@
               <strong>是否可與其他優惠並用</strong>：
               <span v-if="store.concurrent == true">是</span>
               <span v-if="store.concurrent == false">否</span>
+            </div>
+            <div>
+              <span v-if="store.rule == ''"></span>
+              <span v-else><strong>其他條款</strong>：{{ store.rule }}</span>
             </div>
           </div>
           <div class="col-4 flex justify-end">
