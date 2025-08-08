@@ -1,0 +1,12 @@
+{
+  "name": "appointed-store-official",
+  "version": "0.0.1",
+  "description": "A platform about appointed store for CKHS, TFG, ZSGH, CGSH students and teachers",
+  "author": "ChrisSun0731 <chris20090731@gmail.com>",
+  "private": true,
+  "dependencies": {
+    "@capacitor/app": "^7.0.0",
+    "@capacitor/cli": "^7.0.0",
+    "@capacitor/core": "^7.0.0"
+  }
+}

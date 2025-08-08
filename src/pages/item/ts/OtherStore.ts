@@ -22,17 +22,6 @@ export const stores: Store[] = [
     rule: '',
   },
   {
-    name: '演色—捷運古亭',
-    address: '台北市中正區羅斯福路二段50號一樓',
-    phone: '(02)2327-8022',
-    category: '服飾',
-    discount: 'unknown',
-    mapUrl:
-      'https://www.google.com/maps/search/?api=1&query=演色—捷運古亭+台北市中正區羅斯福路二段50號一樓',
-    concurrent: true,
-    rule: '',
-  },
-  {
     name: '宥朋團體服紀念品',
     address: '新北市三重區永福街216號1樓',
     phone: '0989-800765',

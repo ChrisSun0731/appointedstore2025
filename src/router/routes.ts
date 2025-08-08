@@ -49,6 +49,11 @@ const routes: RouteRecordRaw[] = [
     children: [{ path: '', component: () => import('../pages/StorePage/GongGuanPage.vue') }],
   },
   {
+    path: '/guting',
+    component: () => import('layouts/MainLayout.vue'),
+    children: [{ path: '', component: () => import('../pages/StorePage/GuTingPage.vue') }],
+  },
+  {
     path: '/other',
     component: () => import('layouts/MainLayout.vue'),
     children: [{ path: '', component: () => import('../pages/StorePage/OtherPage.vue') }],
