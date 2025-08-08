@@ -19,7 +19,7 @@
           <div class="col-7">
             <div class="q-mb-xs"><strong>地址</strong>：{{ store.address }}</div>
             <div class="q-mb-xs"><strong>電話</strong>：{{ store.phone }}</div>
-            <div><strong>優惠內容</strong>：{{ store.discount }}</div>
+            <div style="white-space: pre-line"><strong>優惠內容</strong>：{{ store.discount }}</div>
             <div>
               <strong>是否可與其他優惠並用</strong>：
               <span v-if="store.concurrent == true">是</span>
@@ -70,7 +70,7 @@
           <div class="col-7">
             <div class="q-mb-xs"><strong>地址</strong>：{{ store.address }}</div>
             <div class="q-mb-xs"><strong>電話</strong>：{{ store.phone }}</div>
-            <div><strong>優惠內容</strong>：{{ store.discount }}</div>
+            <div style="white-space: pre-line"><strong>優惠內容</strong>：{{ store.discount }}</div>
             <div>
               <strong>是否可與其他優惠並用</strong>：
               <span v-if="store.concurrent == true">是</span>
@@ -121,7 +121,7 @@
           <div class="col-7">
             <div class="q-mb-xs"><strong>地址</strong>：{{ store.address }}</div>
             <div class="q-mb-xs"><strong>電話</strong>：{{ store.phone }}</div>
-            <div><strong>優惠內容</strong>：{{ store.discount }}</div>
+            <div style="white-space: pre-line"><strong>優惠內容</strong>：{{ store.discount }}</div>
             <div>
               <strong>是否可與其他優惠並用</strong>：
               <span v-if="store.concurrent == true">是</span>
@@ -172,7 +172,7 @@
           <div class="col-7">
             <div class="q-mb-xs"><strong>地址</strong>：{{ store.address }}</div>
             <div class="q-mb-xs"><strong>電話</strong>：{{ store.phone }}</div>
-            <div><strong>優惠內容</strong>：{{ store.discount }}</div>
+            <div style="white-space: pre-line"><strong>優惠內容</strong>：{{ store.discount }}</div>
             <div>
               <strong>是否可與其他優惠並用</strong>：
               <span v-if="store.concurrent == true">是</span>
@@ -223,7 +223,7 @@
           <div class="col-7">
             <div class="q-mb-xs"><strong>地址</strong>：{{ store.address }}</div>
             <div class="q-mb-xs"><strong>電話</strong>：{{ store.phone }}</div>
-            <div><strong>優惠內容</strong>：{{ store.discount }}</div>
+            <div style="white-space: pre-line"><strong>優惠內容</strong>：{{ store.discount }}</div>
             <div>
               <strong>是否可與其他優惠並用</strong>：
               <span v-if="store.concurrent == true">是</span>
@@ -231,7 +231,9 @@
             </div>
             <div>
               <span v-if="store.rule == ''"></span>
-              <span v-else><strong>其他條款</strong>：{{ store.rule }}</span>
+              <span v-else style="white-space: pre-line"
+                ><strong>其他條款</strong>：{{ store.rule }}</span
+              >
             </div>
           </div>
           <div class="col-4 flex justify-end">
@@ -274,7 +276,7 @@
           <div class="col-7">
             <div class="q-mb-xs"><strong>地址</strong>：{{ store.address }}</div>
             <div class="q-mb-xs"><strong>電話</strong>：{{ store.phone }}</div>
-            <div><strong>優惠內容</strong>：{{ store.discount }}</div>
+            <div style="white-space: pre-line"><strong>優惠內容</strong>：{{ store.discount }}</div>
             <div>
               <strong>是否可與其他優惠並用</strong>：
               <span v-if="store.concurrent == true">是</span>
@@ -282,7 +284,9 @@
             </div>
             <div>
               <span v-if="store.rule == ''"></span>
-              <span v-else><strong>其他條款</strong>：{{ store.rule }}</span>
+              <span v-else style="white-space: pre-line"
+                ><strong>其他條款</strong>：{{ store.rule }}</span
+              >
             </div>
           </div>
           <div class="col-4 flex justify-end">
@@ -325,7 +329,7 @@
           <div class="col-7">
             <div class="q-mb-xs"><strong>地址</strong>：{{ store.address }}</div>
             <div class="q-mb-xs"><strong>電話</strong>：{{ store.phone }}</div>
-            <div><strong>優惠內容</strong>：{{ store.discount }}</div>
+            <div style="white-space: pre-line"><strong>優惠內容</strong>：{{ store.discount }}</div>
             <div>
               <strong>是否可與其他優惠並用</strong>：
               <span v-if="store.concurrent == true">是</span>
@@ -333,7 +337,9 @@
             </div>
             <div>
               <span v-if="store.rule == ''"></span>
-              <span v-else><strong>其他條款</strong>：{{ store.rule }}</span>
+              <span v-else style="white-space: pre-line"
+                ><strong>其他條款</strong>：{{ store.rule }}</span
+              >
             </div>
           </div>
           <div class="col-4 flex justify-end">
