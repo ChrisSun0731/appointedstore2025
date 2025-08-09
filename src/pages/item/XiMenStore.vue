@@ -67,7 +67,7 @@
                 <div class="detail-row q-mb-sm">
                   <q-icon name="merge_type" class="detail-icon q-mr-sm" />
                   <div>
-                    <div class="detail-label">可與其他優惠並用</div>
+                    <div class="detail-label">是否可與其他優惠並用</div>
                     {{ store.concurrent ? '是' : '否' }}
                   </div>
                 </div>

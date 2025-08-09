@@ -1,12 +1,17 @@
+body,
+.stores-container {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
 .q-card {
   border-radius: 18px !important;
   background: rgba(255, 255, 255, 0.8);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-  border: 0.5px solid rgba(255, 255, 255, 0.2);
+  border: 0.5px solid rgba(255, 255, 255, 0.15);
   box-shadow:
-    0 1px 3px rgba(0, 0, 0, 0.05),
-    0 8px 32px rgba(0, 0, 0, 0.08);
+    0 1px 2px rgba(0, 0, 0, 0.04),
+    0 4px 12px rgba(0, 0, 0, 0.08);
   transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   will-change: transform, box-shadow;
 }
@@ -14,7 +19,7 @@
 .q-card:hover {
   transform: translateY(-4px) scale(1.005);
   box-shadow:
-    0 2px 8px rgba(0, 0, 0, 0.08),
+    0 4px 16px rgba(0, 0, 0, 0.08),
     0 16px 48px rgba(0, 0, 0, 0.12);
   border-color: rgba(255, 255, 255, 0.3);
 }
@@ -48,7 +53,7 @@
     transform: translateY(0px) rotate(0deg);
   }
   50% {
-    transform: translateY(-20px) rotate(180deg);
+    transform: translateY(-10px) rotate(5deg);
   }
 }
 
@@ -73,7 +78,7 @@
     transform: translateX(0) translateY(0);
   }
   100% {
-    transform: translateX(-200px) translateY(-100px);
+    transform: translateX(-100px) translateY(-50px);
   }
 }
 
@@ -100,7 +105,7 @@
   font-weight: 600;
   margin: 0 0 0.75rem 0;
   text-align: center;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.03em;
   line-height: 1.2;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
