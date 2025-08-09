@@ -1,390 +1,170 @@
 <template>
-  <div>
-    <div v-if="getStoresByCategory('熱食').length > 0" class="category-section">
-      <q-separator />
-      <div class="category-header q-pa-md">
-        <q-icon name="restaurant" size="md" class="q-mr-sm" />
-        <span class="category-title text-h6 text-weight-bold">熱食類</span>
-      </div>
-      <q-expansion-item
-        v-for="(store, index) in getStoresByCategory('熱食')"
-        :key="`hot-${index}`"
-        expand-separator
-        icon="restaurant"
-        :label="store.name"
-        style="text-align: left"
-      >
-        <div class="row items-center q-pa-md">
-          <div class="col-1"></div>
-          <div class="col-7">
-            <div class="q-mb-xs"><strong>地址</strong>：{{ store.address }}</div>
-            <div class="q-mb-xs"><strong>電話</strong>：{{ store.phone }}</div>
-            <div style="white-space: pre-line"><strong>優惠內容</strong>：{{ store.discount }}</div>
-            <div>
-              <strong>是否可與其他優惠並用</strong>：
-              <span v-if="store.concurrent == true">是</span>
-              <span v-if="store.concurrent == false">否</span>
-            </div>
-            <div>
-              <span v-if="store.rule == ''"></span>
-              <span v-else style="white-space: pre-line"
-                ><strong>其他條款</strong>：{{ store.rule }}</span
-              >
-            </div>
+  <div class="stores-container">
+    <div v-for="category in categories" :key="category.name" class="category-section">
+      <div v-if="category.stores.length > 0">
+        <div class="category-header q-pa-md">
+          <div class="category-icon-wrapper">
+            <q-icon :name="category.icon" class="category-icon" />
           </div>
-          <div class="col-4 flex justify-end">
-            <q-btn
-              flat
-              round
-              size="xl"
-              color="grey-2"
-              class="q-pa-none"
-              @click="goToMap(store.mapUrl)"
-            >
-              <q-img
-                src="/icons/googlemap.png"
-                alt="googlemap"
-                style="width: 60px; height: 60px"
-                fit="contain"
-              />
-            </q-btn>
-          </div>
+          <span class="category-title">{{ category.name }}</span>
+          <div class="category-badge">{{ category.stores.length }}</div>
         </div>
-      </q-expansion-item>
-    </div>
 
-    <div v-if="getStoresByCategory('早午餐').length > 0" class="category-section">
-      <q-separator />
-      <div class="category-header q-pa-md">
-        <q-icon name="free_breakfast" size="md" class="q-mr-sm" />
-        <span class="category-title text-h6 text-weight-bold">早午餐類</span>
-      </div>
-      <q-expansion-item
-        v-for="(store, index) in getStoresByCategory('早午餐')"
-        :key="`breakfast-${index}`"
-        expand-separator
-        icon="free_breakfast"
-        :label="store.name"
-        style="text-align: left"
-      >
-        <div class="row items-center q-pa-md">
-          <div class="col-1"></div>
-          <div class="col-7">
-            <div class="q-mb-xs"><strong>地址</strong>：{{ store.address }}</div>
-            <div class="q-mb-xs"><strong>電話</strong>：{{ store.phone }}</div>
-            <div style="white-space: pre-line"><strong>優惠內容</strong>：{{ store.discount }}</div>
-            <div>
-              <strong>是否可與其他優惠並用</strong>：
-              <span v-if="store.concurrent == true">是</span>
-              <span v-if="store.concurrent == false">否</span>
-            </div>
-            <div>
-              <span v-if="store.rule == ''"></span>
-              <span v-else style="white-space: pre-line"
-                ><strong>其他條款</strong>：{{ store.rule }}</span
+        <div class="stores-grid q-px-md">
+          <q-card
+            v-for="(store, index) in category.stores"
+            :key="`${category.key}-${index}`"
+            class="store-card q-pa-md"
+            @click="toggleStore(`${category.key}-${index}`)"
+          >
+            <div class="store-header row items-center no-wrap">
+              <div class="store-icon q-mr-md">
+                <q-icon :name="category.icon" />
+              </div>
+              <div class="col">
+                <div class="store-name">{{ store.name }}</div>
+                <div class="store-category">{{ category.name }}</div>
+              </div>
+              <div
+                class="expand-indicator"
+                :class="{ expanded: expandedStore === `${category.key}-${index}` }"
               >
+                <q-icon name="keyboard_arrow_down" />
+              </div>
             </div>
-          </div>
-          <div class="col-4 flex justify-end">
-            <q-btn
-              flat
-              round
-              size="xl"
-              color="grey-2"
-              class="q-pa-none"
-              @click="goToMap(store.mapUrl)"
-            >
-              <q-img
-                src="/icons/googlemap.png"
-                alt="googlemap"
-                style="width: 60px; height: 60px"
-                fit="contain"
-              />
-            </q-btn>
-          </div>
-        </div>
-      </q-expansion-item>
-    </div>
 
-    <div v-if="getStoresByCategory('速食').length > 0" class="category-section">
-      <q-separator />
-      <div class="category-header q-pa-md">
-        <q-icon name="fastfood" size="md" class="q-mr-sm" />
-        <span class="category-title text-h6 text-weight-bold">速食類</span>
-      </div>
-      <q-expansion-item
-        v-for="(store, index) in getStoresByCategory('速食')"
-        :key="`fastfood-${index}`"
-        expand-separator
-        icon="fastfood"
-        :label="store.name"
-        style="text-align: left"
-      >
-        <div class="row items-center q-pa-md">
-          <div class="col-1"></div>
-          <div class="col-7">
-            <div class="q-mb-xs"><strong>地址</strong>：{{ store.address }}</div>
-            <div class="q-mb-xs"><strong>電話</strong>：{{ store.phone }}</div>
-            <div style="white-space: pre-line"><strong>優惠內容</strong>：{{ store.discount }}</div>
-            <div>
-              <strong>是否可與其他優惠並用</strong>：
-              <span v-if="store.concurrent == true">是</span>
-              <span v-if="store.concurrent == false">否</span>
-            </div>
-            <div>
-              <span v-if="store.rule == ''"></span>
-              <span v-else style="white-space: pre-line"
-                ><strong>其他條款</strong>：{{ store.rule }}</span
-              >
-            </div>
-          </div>
-          <div class="col-4 flex justify-end">
-            <q-btn
-              flat
-              round
-              size="xl"
-              color="grey-2"
-              class="q-pa-none"
-              @click="goToMap(store.mapUrl)"
+            <div
+              class="store-content"
+              :class="{ expanded: expandedStore === `${category.key}-${index}` }"
             >
-              <q-img
-                src="/icons/googlemap.png"
-                alt="googlemap"
-                style="width: 60px; height: 60px"
-                fit="contain"
-              />
-            </q-btn>
-          </div>
-        </div>
-      </q-expansion-item>
-    </div>
+              <q-separator class="q-my-md" />
 
-    <div v-if="getStoresByCategory('飲料').length > 0" class="category-section">
-      <q-separator />
-      <div class="category-header q-pa-md">
-        <q-icon name="local_drink" size="md" class="q-mr-sm" />
-        <span class="category-title text-h6 text-weight-bold">飲料類</span>
-      </div>
-      <q-expansion-item
-        v-for="(store, index) in getStoresByCategory('飲料')"
-        :key="`drink-${index}`"
-        expand-separator
-        icon="local_drink"
-        :label="store.name"
-        style="text-align: left"
-      >
-        <div class="row items-center q-pa-md">
-          <div class="col-1"></div>
-          <div class="col-7">
-            <div class="q-mb-xs"><strong>地址</strong>：{{ store.address }}</div>
-            <div class="q-mb-xs"><strong>電話</strong>：{{ store.phone }}</div>
-            <div><strong style="white-space: pre-line">優惠內容</strong>：{{ store.discount }}</div>
-            <div>
-              <strong>是否可與其他優惠並用</strong>：
-              <span v-if="store.concurrent == true">是</span>
-              <span v-if="store.concurrent == false">否</span>
-            </div>
-            <div>
-              <span v-if="store.rule == ''"></span>
-              <span v-else style="white-space: pre-line"
-                ><strong>其他條款</strong>：{{ store.rule }}</span
-              >
-            </div>
-          </div>
-          <div class="col-4 flex justify-end">
-            <q-btn
-              flat
-              round
-              size="xl"
-              color="grey-2"
-              class="q-pa-none"
-              @click="goToMap(store.mapUrl)"
-            >
-              <q-img
-                src="/icons/googlemap.png"
-                alt="googlemap"
-                style="width: 60px; height: 60px"
-                fit="contain"
-              />
-            </q-btn>
-          </div>
-        </div>
-      </q-expansion-item>
-    </div>
+              <div class="store-details">
+                <div class="detail-row q-mb-sm">
+                  <q-icon name="location_on" class="detail-icon q-mr-sm" />
+                  <div>
+                    <div class="detail-label">地址</div>
+                    <div class="detail-value">{{ store.address }}</div>
+                  </div>
+                </div>
 
-    <div v-if="getStoresByCategory('甜點').length > 0" class="category-section">
-      <q-separator />
-      <div class="category-header q-pa-md">
-        <q-icon name="cake" size="md" class="q-mr-sm" />
-        <span class="category-title text-h6 text-weight-bold">甜點類</span>
-      </div>
-      <q-expansion-item
-        v-for="(store, index) in getStoresByCategory('甜點')"
-        :key="`dessert-${index}`"
-        expand-separator
-        icon="cake"
-        :label="store.name"
-        style="text-align: left"
-      >
-        <div class="row items-center q-pa-md">
-          <div class="col-1"></div>
-          <div class="col-7">
-            <div class="q-mb-xs"><strong>地址</strong>：{{ store.address }}</div>
-            <div class="q-mb-xs"><strong>電話</strong>：{{ store.phone }}</div>
-            <div style="white-space: pre-line"><strong>優惠內容</strong>：{{ store.discount }}</div>
-            <div>
-              <strong>是否可與其他優惠並用</strong>：
-              <span v-if="store.concurrent == true">是</span>
-              <span v-if="store.concurrent == false">否</span>
-            </div>
-            <div>
-              <span v-if="store.rule == ''"></span>
-              <span v-else style="white-space: pre-line"
-                ><strong>其他條款</strong>：{{ store.rule }}</span
-              >
-            </div>
-          </div>
-          <div class="col-4 flex justify-end">
-            <q-btn
-              flat
-              round
-              size="xl"
-              color="grey-2"
-              class="q-pa-none"
-              @click="goToMap(store.mapUrl)"
-            >
-              <q-img
-                src="/icons/googlemap.png"
-                alt="googlemap"
-                style="width: 60px; height: 60px"
-                fit="contain"
-              />
-            </q-btn>
-          </div>
-        </div>
-      </q-expansion-item>
-    </div>
+                <div class="detail-row q-mb-sm">
+                  <q-icon name="phone" class="detail-icon q-mr-sm" />
+                  <div>
+                    <div class="detail-label">電話</div>
+                    <div class="detail-value">{{ store.phone }}</div>
+                  </div>
+                </div>
 
-    <div v-if="getStoresByCategory('點心').length > 0" class="category-section">
-      <q-separator />
-      <div class="category-header q-pa-md">
-        <q-icon name="local_cafe" size="md" class="q-mr-sm" />
-        <span class="category-title text-h6 text-weight-bold">點心類</span>
-      </div>
-      <q-expansion-item
-        v-for="(store, index) in getStoresByCategory('點心')"
-        :key="`snack-${index}`"
-        expand-separator
-        icon="local_cafe"
-        :label="store.name"
-        style="text-align: left"
-      >
-        <div class="row items-center q-pa-md">
-          <div class="col-1"></div>
-          <div class="col-7">
-            <div class="q-mb-xs"><strong>地址</strong>：{{ store.address }}</div>
-            <div class="q-mb-xs"><strong>電話</strong>：{{ store.phone }}</div>
-            <div style="white-space: pre-line"><strong>優惠內容</strong>：{{ store.discount }}</div>
-            <div>
-              <strong>是否可與其他優惠並用</strong>：
-              <span v-if="store.concurrent == true">是</span>
-              <span v-if="store.concurrent == false">否</span>
-            </div>
-            <div>
-              <span v-if="store.rule == ''"></span>
-              <span v-else style="white-space: pre-line"
-                ><strong>其他條款</strong>：{{ store.rule }}</span
-              >
-            </div>
-          </div>
-          <div class="col-4 flex justify-end">
-            <q-btn
-              flat
-              round
-              size="xl"
-              color="grey-2"
-              class="q-pa-none"
-              @click="goToMap(store.mapUrl)"
-            >
-              <q-img
-                src="/icons/googlemap.png"
-                alt="googlemap"
-                style="width: 60px; height: 60px"
-                fit="contain"
-              />
-            </q-btn>
-          </div>
-        </div>
-      </q-expansion-item>
-    </div>
+                <div class="detail-row q-mb-sm">
+                  <q-icon name="local_offer" class="detail-icon q-mr-sm" />
+                  <div class="col">
+                    <div class="detail-label">優惠內容</div>
+                    <div class="detail-value discount-content">{{ store.discount }}</div>
+                  </div>
+                </div>
 
-    <div v-if="getOtherStores().length > 0" class="category-section">
-      <q-separator />
-      <div class="category-header q-pa-md">
-        <q-icon name="more_horiz" size="md" class="q-mr-sm" />
-        <span class="category-title text-h6 text-weight-bold">其他類</span>
-      </div>
-      <q-expansion-item
-        v-for="(store, index) in getOtherStores()"
-        :key="`other-${index}`"
-        expand-separator
-        icon="more_horiz"
-        :label="store.name"
-        style="text-align: left"
-      >
-        <div class="row items-center q-pa-md">
-          <div class="col-1"></div>
-          <div class="col-7">
-            <div class="q-mb-xs"><strong>地址</strong>：{{ store.address }}</div>
-            <div class="q-mb-xs"><strong>電話</strong>：{{ store.phone }}</div>
-            <div style="white-space: pre-line"><strong>優惠內容</strong>：{{ store.discount }}</div>
-            <div>
-              <strong>是否可與其他優惠並用</strong>：
-              <span v-if="store.concurrent == true">是</span>
-              <span v-if="store.concurrent == false">否</span>
-            </div>
-            <div>
-              <span v-if="store.rule == ''"></span>
-              <span v-else style="white-space: pre-line"
-                ><strong>其他條款</strong>：{{ store.rule }}</span
+                <div class="detail-row q-mb-sm">
+                  <q-icon name="merge_type" class="detail-icon q-mr-sm" />
+                  <div>
+                    <div class="detail-label">可與其他優惠並用</div>
+                    {{ store.concurrent ? '是' : '否' }}
+                  </div>
+                </div>
+
+                <div v-if="store.rule" class="detail-row">
+                  <q-icon name="info" class="detail-icon q-mr-sm" />
+                  <div class="col">
+                    <div class="detail-label">其他條款</div>
+                    <div class="detail-value">{{ store.rule }}</div>
+                  </div>
+                </div>
+              </div>
+
+              <q-btn
+                unelevated
+                class="full-width q-mt-md map-button"
+                style="border-radius: 20px"
+                @click.stop="goToMap(store.mapUrl)"
               >
+                <q-icon name="map" class="q-mr-sm" />
+                查看地圖
+              </q-btn>
             </div>
-          </div>
-          <div class="col-4 flex justify-end">
-            <q-btn
-              flat
-              round
-              size="xl"
-              color="grey-2"
-              class="q-pa-none"
-              @click="goToMap(store.mapUrl)"
-            >
-              <q-img
-                src="/icons/googlemap.png"
-                alt="googlemap"
-                style="width: 60px; height: 60px"
-                fit="contain"
-              />
-            </q-btn>
-          </div>
+          </q-card>
         </div>
-      </q-expansion-item>
+      </div>
     </div>
   </div>
 </template>
 
 <script lang="ts">
 import { stores, getStoresByCategory, getOtherStores, goToMap } from './ts/OtherStore';
+
 export default {
   data() {
     return {
       stores,
+      expandedStore: null as string | null,
     };
   },
+  computed: {
+    categories() {
+      return [
+        {
+          name: '熱食類',
+          key: 'hot',
+          icon: 'restaurant',
+          stores: getStoresByCategory('熱食'),
+        },
+        {
+          name: '早午餐類',
+          key: 'breakfast',
+          icon: 'free_breakfast',
+          stores: getStoresByCategory('早午餐'),
+        },
+        {
+          name: '速食類',
+          key: 'fastfood',
+          icon: 'fastfood',
+          stores: getStoresByCategory('速食'),
+        },
+        {
+          name: '飲料類',
+          key: 'drink',
+          icon: 'local_drink',
+          stores: getStoresByCategory('飲料'),
+        },
+        {
+          name: '甜點類',
+          key: 'dessert',
+          icon: 'cake',
+          stores: getStoresByCategory('甜點'),
+        },
+        {
+          name: '點心類',
+          key: 'snack',
+          icon: 'local_cafe',
+          stores: getStoresByCategory('點心'),
+        },
+        {
+          name: '其他類',
+          key: 'other',
+          icon: 'more_horiz',
+          stores: getOtherStores(),
+        },
+      ];
+    },
+  },
   methods: {
-    getStoresByCategory,
-    getOtherStores,
+    toggleStore(storeId: string) {
+      this.expandedStore = this.expandedStore === storeId ? null : storeId;
+    },
     goToMap,
   },
 };
 </script>
+
+<style>
+@import '../../css/pages.scss';
+</style>

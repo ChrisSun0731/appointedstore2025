@@ -1,16 +1,22 @@
 .q-card {
-  border-radius: 30px !important;
+  border-radius: 18px !important;
   background: rgba(255, 255, 255, 0.8);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  transition:
-    transform 0.3s ease,
-    box-shadow 0.3s ease;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 0.5px solid rgba(255, 255, 255, 0.2);
+  box-shadow:
+    0 1px 3px rgba(0, 0, 0, 0.05),
+    0 8px 32px rgba(0, 0, 0, 0.08);
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  will-change: transform, box-shadow;
 }
 
 .q-card:hover {
-  transform: translateY(-2px) scale(1.01);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  transform: translateY(-4px) scale(1.005);
+  box-shadow:
+    0 2px 8px rgba(0, 0, 0, 0.08),
+    0 16px 48px rgba(0, 0, 0, 0.12);
+  border-color: rgba(255, 255, 255, 0.3);
 }
 
 .q-page {
@@ -78,43 +84,61 @@
 
 .info {
   font-size: 0.9rem;
-  color: #000000;
-  font-weight: 500;
-  letter-spacing: 0.5px;
+  color: #1d1d1f;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  line-height: 1.47;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
 
 .body--dark .info {
-  color: #9ca3af;
+  color: #f5f5f7;
 }
 
 .section-title {
-  font-size: 1.5rem;
+  font-size: 1.75rem;
   font-weight: 600;
-  margin: 0 0 0.5rem 0;
+  margin: 0 0 0.75rem 0;
   text-align: center;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
 
 .section-title-gradient {
-  background: linear-gradient(90deg, #4f9dff, #2b6fe5);
+  background: linear-gradient(135deg, #007aff 0%, #5856d6 50%, #af52de 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
+  color: transparent;
 }
 
 .guidelines-content {
-  max-width: 680px;
+  max-width: 720px;
   margin: 0 auto;
 }
 
 .guideline-item {
   display: flex;
   align-items: flex-start;
-  margin-bottom: 1.5rem;
-  padding: 1rem;
-  background: rgba(255, 255, 255, 0.5);
-  border-radius: 8px;
+  margin-bottom: 1.25rem;
+  padding: 1.5rem;
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  border: 0.5px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.guideline-item:hover {
+  background: rgba(255, 255, 255, 0.7);
+  border-color: rgba(255, 255, 255, 0.3);
+  transform: translateY(-1px);
 }
 
 .body--dark .guideline-item {
   background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.1);
 }
 
 .guideline-item:last-child {
@@ -122,52 +146,80 @@
 }
 
 .guideline-number {
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-weight: 600;
-  margin-right: 1rem;
+  margin-right: 1.25rem;
   flex-shrink: 0;
+  background: rgba(0, 122, 255, 0.1);
+  width: 28px;
+  height: 28px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.body--dark .guideline-number {
+  background: rgba(10, 132, 255, 0.15);
 }
 
 .guideline-text {
-  line-height: 1.6;
-  color: #000000;
-  text-align: justify;
+  line-height: 1.5;
+  color: #1d1d1f;
+  text-align: left;
+  font-weight: 400;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
 
 .body--dark .guideline-text {
-  color: #ffffff;
+  color: #f5f5f7;
+}
+
+.LogoStyle {
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  max-width: clamp(140px, 40%, 220px);
+  max-height: clamp(90px, 40%, 220px);
+  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.1));
+}
+
+.LogoStyle:hover {
+  transform: scale(1.05);
+  filter: drop-shadow(0 8px 24px rgba(0, 0, 0, 0.15));
 }
 
 @media (max-width: 600px) {
   .content-section {
-    padding: 2rem 1.5rem;
+    padding: 2rem 1.25rem;
   }
 
   .signature-section {
-    padding: 1rem;
+    padding: 1.25rem;
     text-align: center;
   }
 
   .guideline-item {
-    padding: 0.8rem;
+    padding: 1.25rem;
   }
 
   .guideline-number {
-    margin-right: 0.8rem;
+    margin-right: 1rem;
+    width: 24px;
+    height: 24px;
+    border-radius: 12px;
+    font-size: 0.9rem;
   }
-}
 
-.LogoStyle {
-  transition: all 0.3s ease;
-  max-width: clamp(130px, 40%, 200px);
-  max-height: clamp(80px, 40%, 200px);
+  .section-title {
+    font-size: 1.5rem;
+  }
 }
 
 @media (max-width: 1024px) and (min-width: 600px) {
   .LogoStyle {
     max-width: 50% !important;
     max-height: 50% !important;
-    min-width: 150px !important;
+    min-width: 160px !important;
   }
 }
 
@@ -175,8 +227,8 @@
   .LogoStyle {
     max-width: 65% !important;
     max-height: 65% !important;
-    min-width: 130px !important;
-    min-height: 80px !important;
+    min-width: 140px !important;
+    min-height: 90px !important;
   }
 }
 
@@ -184,7 +236,7 @@
   .LogoStyle {
     max-width: 70% !important;
     max-height: 70% !important;
-    min-width: 140px !important;
+    min-width: 150px !important;
   }
 }
 
@@ -196,4 +248,206 @@
 .q-page > * {
   position: relative;
   z-index: 1;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .q-card,
+  .guideline-item,
+  .LogoStyle {
+    will-change: transform;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .q-page::after {
+    animation: none;
+  }
+
+  .q-card,
+  .guideline-item,
+  .LogoStyle {
+    transition-duration: 0.1s;
+  }
+}
+
+.stores-container {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.category-section {
+  margin-bottom: 2rem;
+}
+
+.category-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.category-icon-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  background: linear-gradient(135deg, #007aff 0%, #5856d6 100%);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 122, 255, 0.3);
+
+  .category-icon {
+    color: white;
+    font-size: 1.5rem;
+  }
+}
+
+.category-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1d1d1f;
+  flex: 1;
+  letter-spacing: -0.02em;
+}
+
+.body--dark .category-title {
+  color: #f5f5f7;
+}
+
+.category-badge {
+  background: rgba(0, 122, 255, 0.1);
+  color: #007aff;
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.body--dark .category-badge {
+  background: rgba(10, 132, 255, 0.15);
+  color: #0a84ff;
+}
+
+.stores-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1rem;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.store-card {
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+
+  &:hover {
+    transform: translateY(-2px);
+  }
+}
+
+.store-header {
+  .store-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: rgba(0, 122, 255, 0.1);
+    border-radius: 10px;
+
+    .body--dark & {
+      background: rgba(10, 132, 255, 0.15);
+    }
+  }
+
+  .store-name {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: #1d1d1f;
+    margin-bottom: 0.25rem;
+
+    .body--dark & {
+      color: #f5f5f7;
+    }
+  }
+
+  .store-category {
+    font-size: 0.875rem;
+    color: #86868b;
+
+    .body--dark & {
+      color: #98989d;
+    }
+  }
+
+  .expand-indicator {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    background: rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+
+    &.expanded {
+      transform: rotate(180deg);
+      background: rgba(0, 122, 255, 0.1);
+      color: #007aff;
+    }
+
+    .body--dark & {
+      background: rgba(255, 255, 255, 0.08);
+
+      &.expanded {
+        background: rgba(10, 132, 255, 0.15);
+        color: #0a84ff;
+      }
+    }
+  }
+}
+
+.store-content {
+  max-height: 0;
+  overflow: hidden;
+  text-align: left;
+  transition: all 0.3s ease;
+  opacity: 0;
+
+  &.expanded {
+    max-height: 500px;
+    opacity: 1;
+  }
+}
+
+.detail-row {
+  display: flex;
+  align-items: flex-start;
+  white-space: pre-line;
+
+  .detail-icon {
+    font-size: 1.125rem;
+    margin-top: 4px;
+  }
+
+  .detail-label {
+    font-size: 0.875rem;
+    font-weight: 500;
+    margin-bottom: 0.25rem;
+  }
+
+  .detail-value {
+    font-size: 0.9375rem;
+    line-height: 1.5;
+  }
+}
+
+.map-button {
+  font-weight: 600;
+  background: linear-gradient(135deg, #007aff 0%, #5856d6 100%);
+
+  &:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 16px rgba(0, 122, 255, 0.4);
+  }
 }
