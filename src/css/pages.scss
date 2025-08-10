@@ -414,7 +414,7 @@ body,
 
 .store-content {
   max-height: 0;
-  overflow: hidden;
+  overflow: visible;
   text-align: left;
   transition: all 0.3s ease;
   opacity: 0;

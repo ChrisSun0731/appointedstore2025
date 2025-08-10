@@ -31,25 +31,25 @@
         />
       </q-toolbar>
     </q-header>
-
-    <q-drawer
-      v-model="leftDrawerOpen"
-      show-if-above
-      bordered
-      behavior="mobile"
-      class="refined-drawer"
-    >
-      <q-list class="drawer-list">
-        <q-item-label header class="drawer-header">選單</q-item-label>
-        <EssentialLink
-          v-for="link in linksList"
-          :key="link.title"
-          v-bind="link"
-          class="refined-link"
-        />
-      </q-list>
-    </q-drawer>
-
+    <div class="drawer-wrapper">
+      <q-drawer
+        v-model="leftDrawerOpen"
+        show-if-above
+        bordered
+        behavior="mobile"
+        class="refined-drawer custom-drawer"
+      >
+        <q-list class="drawer-list">
+          <q-item-label header class="drawer-header">選單</q-item-label>
+          <EssentialLink
+            v-for="link in linksList"
+            :key="link.title"
+            v-bind="link"
+            class="refined-link"
+          />
+        </q-list>
+      </q-drawer>
+    </div>
     <q-page-container class="refined-container">
       <router-view />
     </q-page-container>
@@ -100,201 +100,5 @@ onMounted(() => {
 </script>
 
 <style scoped>
-.refined-layout {
-  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', system-ui, sans-serif;
-}
-
-.refined-header {
-  background: rgba(255, 255, 255, 0.95);
-  backdrop-filter: saturate(180%) blur(20px);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
-}
-
-.body--dark .refined-header {
-  background: rgba(28, 28, 30, 0.95);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-}
-
-.refined-toolbar {
-  height: 52px;
-  padding: 0 20px;
-}
-
-.menu-btn {
-  color: #1d1d1f;
-  width: 40px;
-  height: 40px;
-  border-radius: 10px;
-  transition: all 0.2s ease;
-}
-
-.menu-btn:hover {
-  background: rgba(0, 0, 0, 0.06);
-}
-
-.body--dark .menu-btn {
-  color: #f5f5f7;
-}
-
-.body--dark .menu-btn:hover {
-  background: rgba(255, 255, 255, 0.08);
-}
-
-.toolbar-title {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  flex: 1;
-  margin: 0 20px;
-}
-
-.brand-avatar {
-  width: 32px;
-  height: 32px;
-  border-radius: 8px;
-}
-
-.brand-text {
-  display: flex;
-  flex-direction: column;
-}
-
-.brand-main {
-  font-size: 15px;
-  font-weight: 600;
-  color: #1d1d1f;
-  letter-spacing: -0.022em;
-  line-height: 1.2;
-}
-
-.body--dark .brand-main {
-  color: #f5f5f7;
-}
-
-.theme-btn {
-  color: #1d1d1f;
-  width: 40px;
-  height: 40px;
-  border-radius: 10px;
-  transition: all 0.2s ease;
-}
-
-.theme-btn:hover {
-  background: rgba(0, 0, 0, 0.06);
-}
-
-.body--dark .theme-btn {
-  color: #f5f5f7;
-}
-
-.body--dark .theme-btn:hover {
-  background: rgba(255, 255, 255, 0.08);
-}
-
-.refined-drawer {
-  background: #f9f9f9;
-  border-right: 1px solid rgba(0, 0, 0, 0.08);
-  width: 280px;
-}
-
-.body--dark .refined-drawer {
-  background: #1c1c1e;
-  border-right: 1px solid rgba(255, 255, 255, 0.08);
-}
-
-.drawer-list {
-  padding: 20px 0;
-}
-
-.drawer-header {
-  background: transparent;
-  color: #86868b;
-  font-size: 13px;
-  font-weight: 600;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  padding: 16px 24px 12px;
-  margin: 0;
-}
-
-.body--dark .drawer-header {
-  color: #98989d;
-}
-
-.refined-link :deep(.q-item) {
-  border-radius: 12px;
-  margin: 3px 16px;
-  padding: 12px 16px;
-  transition: all 0.15s ease;
-  color: #1d1d1f;
-  min-height: 48px;
-}
-
-.refined-link :deep(.q-item:hover) {
-  background: rgba(0, 0, 0, 0.04);
-  transform: translateX(2px);
-}
-
-.refined-link :deep(.q-item.q-router-link--active) {
-  background: #007aff;
-  color: white;
-  box-shadow: 0 2px 8px rgba(0, 122, 255, 0.3);
-}
-
-.refined-link :deep(.q-item.q-router-link--active:hover) {
-  background: #0056b3;
-  transform: translateX(2px);
-}
-
-.body--dark .refined-link :deep(.q-item) {
-  color: #f5f5f7;
-}
-
-.body--dark .refined-link :deep(.q-item:hover) {
-  background: rgba(255, 255, 255, 0.06);
-}
-
-.body--dark .refined-link :deep(.q-item.q-router-link--active) {
-  background: #0a84ff;
-}
-
-.body--dark .refined-link :deep(.q-item.q-router-link--active:hover) {
-  background: #409cff;
-}
-
-.refined-link :deep(.q-item__section--avatar) {
-  min-width: 40px;
-}
-
-.refined-link :deep(.q-icon) {
-  font-size: 20px;
-}
-
-.refined-link :deep(.q-item__label) {
-  font-size: 15px;
-  font-weight: 500;
-  letter-spacing: -0.01em;
-}
-
-.refined-container {
-  background: #ffffff;
-}
-
-.body--dark .refined-container {
-  background: #000000;
-}
-
-@media (max-width: 600px) {
-  .refined-toolbar {
-    padding: 0 16px;
-  }
-
-  .toolbar-title {
-    margin: 0 16px;
-  }
-
-  .brand-main {
-    font-size: 16px;
-  }
-}
+@import '../css/layout.scss';
 </style>
