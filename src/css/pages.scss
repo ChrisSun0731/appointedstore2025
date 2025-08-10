@@ -450,7 +450,7 @@ body,
 .map-button {
   font-weight: 600;
   background: linear-gradient(135deg, #007aff 0%, #5856d6 100%);
-
+  color: white;
   &:hover {
     transform: translateY(-1px);
     box-shadow: 0 4px 16px rgba(0, 122, 255, 0.4);
