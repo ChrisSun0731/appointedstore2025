@@ -15,9 +15,9 @@ export const stores: Store[] = [
     address: '台北市中正區寧波西街88之1號',
     phone: '(02)2397-0900',
     category: '熱食',
-    discount: 'unknown',
+    discount: '單筆消費滿100元折5元',
     mapUrl: 'https://www.google.com/maps/search/?api=1&query=懿品小珍+台北市中正區寧波西街88之1號',
-    concurrent: true,
+    concurrent: false,
     rule: '',
   },
   {
@@ -150,6 +150,18 @@ export const stores: Store[] = [
     mapUrl: 'https://www.google.com/maps/search/?api=1&query=麵老大+台北市中正區寧波西街85-1號',
     concurrent: true,
     rule: '',
+  },
+  {
+    name: '曼鯊鯊餐坊',
+    address: '台北市中正區南昌路一段74巷6號',
+    phone: '(02)2393-5933',
+    category: '熱食',
+    discount:
+      '1. 持有效證件，下午營業時段，內用/外帶單一主餐9折\n2. 出示100分期中考或期末考考卷(答案需全填寫不得亂猜)單一主餐五折優待',
+    mapUrl:
+      'https://www.google.com/maps/place/%E6%9B%BC%E9%AF%8A%E9%AF%8A%E9%A4%90%E5%9D%8A/@25.030863,121.517001,15z/data=!4m2!3m1!1s0x0:0x3d06513f8b1fbd47?sa=X&ved=2ahUKEwi74bzJk9X7AhVLa94KHTPeDNEQ_BJ6BQiJARAJ',
+    concurrent: true,
+    rule: '1. 需線上或掃碼點餐\n2. 其中期末考考卷須於考完28日(3周)內兌換，逾時無效\n3. 本活動不得與其他同類型(主餐)優惠活動並用',
   },
   {
     name: '福井麵疙瘩',
