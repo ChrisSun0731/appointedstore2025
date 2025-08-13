@@ -50,6 +50,9 @@
         </q-list>
       </q-drawer>
     </div>
+    <q-page-container class="refined-container">
+      <router-view />
+    </q-page-container>
   </q-layout>
 </template>
 
