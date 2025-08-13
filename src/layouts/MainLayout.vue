@@ -53,6 +53,11 @@
     <q-page-container class="refined-container">
       <router-view />
     </q-page-container>
+    <q-footer elevated class="refined-footer">
+      <div class="footer-text">
+        © {{ new Date().getFullYear() }} 建北中成四校聯合特約商店. All rights reserved.
+      </div>
+    </q-footer>
   </q-layout>
 </template>
 
