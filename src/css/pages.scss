@@ -61,15 +61,32 @@ body,
   background: linear-gradient(135deg, #1e3c72 0%, #2a5298 50%, #0075dc 100%);
 }
 
+$stars: ();
+
+@for $i from 1 through 250 {
+  $x: random(100) * 1%;
+  $y: random(100) * 1%;
+  $size: random(3) + 1px;
+
+  $stars: append(
+    $stars,
+    radial-gradient($size $size at $x $y, rgba(255, 255, 255, 0.8), transparent),
+    comma
+  );
+}
+
 .body--dark .q-page::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
   filter: blur(1px);
-  background-image:
-    radial-gradient(2px 2px at 20px 30px, rgba(255, 255, 255, 0.8), transparent),
-    radial-gradient(2px 2px at 40px 70px, rgba(255, 255, 255, 0.6), transparent),
-    radial-gradient(1px 1px at 90px 40px, rgba(255, 255, 255, 0.9), transparent),
-    radial-gradient(1px 1px at 130px 80px, rgba(255, 255, 255, 0.7), transparent);
-  background-repeat: repeat;
-  background-size: 200px 100px;
+  background-image: $stars;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
   animation: particles-move 25s linear infinite;
 }
 
