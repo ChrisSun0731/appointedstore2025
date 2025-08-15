@@ -1,9 +1,9 @@
 <template>
-  <q-page class="q-pa-md">
-    <q-card flat bordered class="q-pa-xl q-mx-auto shadow-2" style="max-width: 700px; width: 100%">
+  <q-page>
+    <br />
+    <q-card flat bordered class="q-pa-xl q-mx-auto shadow-2" style="max-width: 700px; width: 91%">
       <q-card-section class="column items-center">
         <q-img src="/icons/zscalogo.png" alt="zscalogo" class="LogoStyle" fit="contain" />
-
         <div class="text-h4 text-center q-mt-md">
           <br />
           <span v-if="$q.screen.gt.xs" class="q-pl-sm"><strong>特約商店-中山篇</strong></span>

@@ -1,6 +1,7 @@
 <template>
-  <q-page class="q-pa-md">
-    <q-card flat bordered class="q-pa-xl q-mx-auto shadow-2" style="max-width: 700px; width: 100%">
+  <q-page>
+    <br />
+    <q-card flat bordered class="q-pa-xl q-mx-auto shadow-2" style="max-width: 700px; width: 91%">
       <q-card-section class="column items-center">
         <q-img src="/icons/logo.png" alt="logo" class="LogoStyle" fit="contain" />
         <div class="text-h4 text-center q-mt-md">
@@ -16,7 +17,7 @@
       </q-card-section>
 
       <q-separator spaced />
-      <q-card-section class="q-pa-md">
+      <q-card-section class="q-pa-xs">
         <div class="text-center q-mt-md" style="font-size: 20px">
           <strong>關於四校特約</strong>
         </div>

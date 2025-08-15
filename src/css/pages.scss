@@ -348,22 +348,34 @@ $stars: ();
   color: #0a84ff;
 }
 
-.stores-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-  gap: 1rem;
+@media (min-width: 769px) {
+  .stores-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 1rem;
+  }
 
-  @media (max-width: 768px) {
-    grid-template-columns: 1fr;
+  .store-card {
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    max-width: 700px;
+    width: 100%;
+    margin: 0 auto;
+
+    &:hover {
+      transform: translateY(-2px);
+    }
   }
 }
 
-.store-card {
-  cursor: pointer;
-  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+@media (max-width: 768px) {
+  .stores-grid {
+    display: block;
+  }
 
-  &:hover {
-    transform: translateY(-2px);
+  .store-card {
+    max-width: 100%;
+    margin-bottom: 1rem;
   }
 }
 

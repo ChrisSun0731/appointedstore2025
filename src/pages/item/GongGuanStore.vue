@@ -10,7 +10,7 @@
           <div class="category-badge">{{ category.stores.length }}</div>
         </div>
 
-        <div class="stores-grid q-px-md">
+        <div class="stores-grid">
           <q-card
             v-for="(store, index) in category.stores"
             :key="`${category.key}-${index}`"
@@ -167,15 +167,4 @@ export default {
 
 <style>
 @import '../../css/pages.scss';
-.store-content {
-  max-height: 0;
-  text-align: left;
-  transition: all 0.3s ease;
-  opacity: 0;
-  overflow: visible;
-  &.expanded {
-    max-height: 500px;
-    opacity: 1;
-  }
-}
 </style>

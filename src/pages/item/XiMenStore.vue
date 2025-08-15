@@ -10,7 +10,7 @@
           <div class="category-badge">{{ category.stores.length }}</div>
         </div>
 
-        <div class="stores-grid q-px-md">
+        <div class="stores-grid">
           <q-card
             v-for="(store, index) in category.stores"
             :key="`${category.key}-${index}`"

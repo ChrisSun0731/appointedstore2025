@@ -1,6 +1,7 @@
 <template>
-  <q-page class="q-pa-md">
-    <q-card flat bordered class="q-pa-xl q-mx-auto shadow-2" style="max-width: 700px; width: 100%">
+  <q-page>
+    <br />
+    <q-card flat bordered class="q-pa-xl q-mx-auto shadow-2" style="max-width: 700px; width: 91%">
       <q-card-section class="column items-center">
         <q-img
           src="../../../public/icons/cksclogo.png"
