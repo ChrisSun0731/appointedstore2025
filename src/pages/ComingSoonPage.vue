@@ -12,7 +12,16 @@
           <span v-else><strong>四校特約商店</strong></span>
           <br />
           <br />
-          <div style="font-style: italic; font-family: Brush Script MT">Coming Soon</div>
+          <div
+            style="
+              font-style: italic;
+              font-family:
+                Brush Script MT,
+                cursive;
+            "
+          >
+            Coming Soon
+          </div>
         </div>
       </q-card-section>
     </q-card>
