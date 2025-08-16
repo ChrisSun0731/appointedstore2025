@@ -59,6 +59,16 @@ const routes: RouteRecordRaw[] = [
     children: [{ path: '', component: () => import('../pages/StorePage/OtherPage.vue') }],
   },*/
   {
+    path: '/map',
+    component: () => import('layouts/MainLayout.vue'),
+    children: [{ path: '', component: () => import('pages/ComingSoonPage.vue') }],
+  },
+  {
+    path: '/book',
+    component: () => import('layouts/MainLayout.vue'),
+    children: [{ path: '', component: () => import('pages/ComingSoonPage.vue') }],
+  },
+  {
     path: '/ckhs',
     component: () => import('layouts/MainLayout.vue'),
     children: [{ path: '', component: () => import('../pages/ComingSoonPage.vue') }],
